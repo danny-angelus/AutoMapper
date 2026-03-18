@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.MappingInheritance;
+namespace Morphy.UnitTests.MappingInheritance;
 
-public class IncludeBaseWithNonGenericUsage : AutoMapperSpecBase
+public class IncludeBaseWithNonGenericUsage : MorphySpecBase
 {
     class Source : SourceBase<string>
     { }
@@ -31,7 +31,7 @@ public class IncludeBaseWithNonGenericUsage : AutoMapperSpecBase
     [Fact]
     public void Validate() => AssertConfigurationIsValid();
 }
-public class IncludeBaseWithGenericUsage : AutoMapperSpecBase
+public class IncludeBaseWithGenericUsage : MorphySpecBase
 {
     class Source : SourceBase<string>
     { }

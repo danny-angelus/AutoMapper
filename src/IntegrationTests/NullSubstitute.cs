@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+namespace Morphy.IntegrationTests;
 
 public class NullSubstitute(DatabaseFixture databaseFixture) : IntegrationTest<NullSubstitute.DatabaseInitializer>(databaseFixture)
 {

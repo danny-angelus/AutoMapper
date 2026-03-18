@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class OneSourceWithMultipleDestinationsAndPreserveReferences : AutoMapperSpecBase
+public class OneSourceWithMultipleDestinationsAndPreserveReferences : MorphySpecBase
 {
     ClientModel _destination;
 

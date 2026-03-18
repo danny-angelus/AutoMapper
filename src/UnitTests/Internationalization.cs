@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests
+namespace Morphy.UnitTests
 {
     namespace Internationalization
     {
-        public class When_mapping_a_source_with_non_english_property_names : AutoMapperSpecBase
+        public class When_mapping_a_source_with_non_english_property_names : MorphySpecBase
         {
             private OrderDto _result;
 

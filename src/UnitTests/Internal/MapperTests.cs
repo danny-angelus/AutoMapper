@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests.Tests;
+namespace Morphy.UnitTests.Tests;
 
 public class MapperTests : NonValidatingSpecBase
 {

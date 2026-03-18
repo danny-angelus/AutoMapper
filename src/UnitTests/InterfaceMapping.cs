@@ -1,5 +1,5 @@
-namespace AutoMapper.UnitTests.InterfaceMapping;
-public class InterfaceWithObjectProperty : AutoMapperSpecBase
+namespace Morphy.UnitTests.InterfaceMapping;
+public class InterfaceWithObjectProperty : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg => cfg.CreateMap<ISourceModel, IDestModel>());
     public interface ISourceModel
@@ -21,7 +21,7 @@ public class InterfaceWithObjectProperty : AutoMapperSpecBase
     [Fact]
     public void Should_work() => Mapper.Map(new SourceModel { Id = 42 }, new DestModel()).Id.ShouldBe(42);
 }
-public class InterfaceInheritance : AutoMapperSpecBase
+public class InterfaceInheritance : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {
@@ -75,10 +75,10 @@ public class MapToInterface : NonValidatingSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(c=>c.CreateMap<object, IEnumerable<object>>());
     [Fact]
-    public void Should_throw() => new Action(()=>Mapper.Map<IEnumerable<object>>(new object())).ShouldThrow<AutoMapperMappingException>().Message.ShouldStartWith(
+    public void Should_throw() => new Action(()=>Mapper.Map<IEnumerable<object>>(new object())).ShouldThrow<MorphyMappingException>().Message.ShouldStartWith(
         "Cannot create interface System.Collections.Generic.IEnumerable`1[System.Object]");
 }
-public class GenericsAndInterfaces : AutoMapperSpecBase
+public class GenericsAndInterfaces : MorphySpecBase
 {
     MyClass<ContainerClass> source = new MyClass<ContainerClass> { Container = new ContainerClass { MyProperty = 3 } };
 
@@ -124,7 +124,7 @@ public class GenericsAndInterfaces : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_generic_interface : AutoMapperSpecBase
+public class When_mapping_generic_interface : MorphySpecBase
 {
     public class Source<T> : List<T>
     {
@@ -187,7 +187,7 @@ public class When_mapping_generic_interface : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_an_interface_with_getter_only_member : AutoMapperSpecBase
+public class When_mapping_an_interface_with_getter_only_member : MorphySpecBase
 {
     interface ISource
     {
@@ -238,7 +238,7 @@ public class When_mapping_base_interface_members
     }
 }
 
-public class When_mapping_to_existing_object_through_interfaces : AutoMapperSpecBase
+public class When_mapping_to_existing_object_through_interfaces : MorphySpecBase
 {
     private class2DTO _result;
 
@@ -301,7 +301,7 @@ public class When_mapping_to_existing_object_through_interfaces : AutoMapperSpec
     }
 }
 
-public class When_mapping_an_interface_to_an_abstract_type : AutoMapperSpecBase
+public class When_mapping_an_interface_to_an_abstract_type : MorphySpecBase
 {
     private DtoObject _result;
 
@@ -367,7 +367,7 @@ public class When_mapping_an_interface_to_an_abstract_type : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_a_concrete_type_to_an_interface_type : AutoMapperSpecBase
+public class When_mapping_a_concrete_type_to_an_interface_type : MorphySpecBase
 {
     private IDestination _result;
 
@@ -417,7 +417,7 @@ public class When_mapping_a_concrete_type_to_an_interface_type : AutoMapperSpecB
     }
 }
 
-public class When_mapping_an_interface_type_to_a_concrete_type_and_reverse : AutoMapperSpecBase
+public class When_mapping_an_interface_type_to_a_concrete_type_and_reverse : MorphySpecBase
 {
     public interface ISource
     {
@@ -435,12 +435,12 @@ public class When_mapping_an_interface_type_to_a_concrete_type_and_reverse : Aut
     [Fact]
     public void Should_not_convert_to_interface()
     {
-        Should.Throw<AutoMapperMappingException>(() => Mapper.Map<Destination, ISource>(new Destination {Value = 5}))
+        Should.Throw<MorphyMappingException>(() => Mapper.Map<Destination, ISource>(new Destination {Value = 5}))
             .Message.ShouldStartWith("Cannot create interface " + typeof(ISource).FullName);
     }
 }
 
-public class When_mapping_an_interface_type_to_an_interface_type_and_reverse : AutoMapperSpecBase
+public class When_mapping_an_interface_type_to_an_interface_type_and_reverse : MorphySpecBase
 {
     public interface ISource
     {
@@ -478,7 +478,7 @@ public class When_mapping_an_interface_type_to_an_interface_type_and_reverse : A
     }
 }
 
-public class When_mapping_a_concrete_type_to_an_interface_type_and_reverse : AutoMapperSpecBase
+public class When_mapping_a_concrete_type_to_an_interface_type_and_reverse : MorphySpecBase
 {
     public class Source
     {
@@ -510,7 +510,7 @@ public class When_mapping_a_concrete_type_to_an_interface_type_and_reverse : Aut
     }
 }
 
-public class When_mapping_a_concrete_type_to_an_interface_type_that_derives_from_INotifyPropertyChanged : AutoMapperSpecBase
+public class When_mapping_a_concrete_type_to_an_interface_type_that_derives_from_INotifyPropertyChanged : MorphySpecBase
 {
     private IDestination _result;
 
@@ -582,7 +582,7 @@ public class When_mapping_a_concrete_type_to_an_interface_type_that_derives_from
     }
 }
 
-public class When_mapping_a_derived_interface_to_an_derived_concrete_type : AutoMapperSpecBase
+public class When_mapping_a_derived_interface_to_an_derived_concrete_type : MorphySpecBase
 {
     private Destination _result = null;
 
@@ -635,7 +635,7 @@ public class When_mapping_a_derived_interface_to_an_derived_concrete_type : Auto
     }
 }
 
-public class When_mapping_a_derived_interface_to_an_derived_concrete_type_with_readonly_interface_members : AutoMapperSpecBase
+public class When_mapping_a_derived_interface_to_an_derived_concrete_type_with_readonly_interface_members : MorphySpecBase
 {
     private Destination _result = null;
 
@@ -698,7 +698,7 @@ public class When_mapping_a_derived_interface_to_an_derived_concrete_type_with_r
     }
 }
 
-public class When_mapping_to_a_type_with_explicitly_implemented_interface_members : AutoMapperSpecBase
+public class When_mapping_to_a_type_with_explicitly_implemented_interface_members : MorphySpecBase
 {
     private Destination _destination;
 
@@ -735,7 +735,7 @@ public class When_mapping_to_a_type_with_explicitly_implemented_interface_member
     }
 }
 
-public class MappingToInterfacesWithPolymorphism : AutoMapperSpecBase
+public class MappingToInterfacesWithPolymorphism : MorphySpecBase
 {
     private BaseDto[] _baseDtos;
 

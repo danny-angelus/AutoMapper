@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests.Bug
+namespace Morphy.UnitTests.Bug
 {
     namespace AddingConfigurationForNonMatchingDestinationMember
     {
@@ -23,7 +23,7 @@ namespace AutoMapper.UnitTests.Bug
             [Fact]
             public void Should_show_configuration_error()
             {
-                typeof (AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+                typeof (MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
             }
         }
     }

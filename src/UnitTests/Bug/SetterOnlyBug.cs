@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Bug
+namespace Morphy.UnitTests.Bug
 {
     namespace SetterOnlyBug
     {
-        public class MappingTests : AutoMapperSpecBase
+        public class MappingTests : MorphySpecBase
         {
             protected override MapperConfiguration CreateConfiguration() => new(cfg =>
             {

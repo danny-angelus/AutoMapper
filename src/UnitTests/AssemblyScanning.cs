@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests
+namespace Morphy.UnitTests
 {
     namespace AssemblyScanning
     {
@@ -44,16 +44,16 @@
 
         public class When_scanning_by_name : NonValidatingSpecBase
         {
-            private static readonly Assembly AutoMapperAssembly = typeof(When_scanning_by_name).Assembly;
+            private static readonly Assembly MorphyAssembly = typeof(When_scanning_by_name).Assembly;
 
             protected override MapperConfiguration CreateConfiguration() => new(cfg =>
             {
                 AppDomain.CurrentDomain.AssemblyResolve += OnAssemblyResolve;
-                cfg.AddMaps(new[] { AutoMapperAssembly.FullName });
+                cfg.AddMaps(new[] { MorphyAssembly.FullName });
                 AppDomain.CurrentDomain.AssemblyResolve -= OnAssemblyResolve;
             });
 
-            private static Assembly OnAssemblyResolve(object sender, ResolveEventArgs args) => args.Name == AutoMapperAssembly.FullName ? AutoMapperAssembly : null;
+            private static Assembly OnAssemblyResolve(object sender, ResolveEventArgs args) => args.Name == MorphyAssembly.FullName ? MorphyAssembly : null;
 
             [Fact]
             public void Should_load_profiles()

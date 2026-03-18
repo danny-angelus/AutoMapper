@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests.ConditionalMapping;
+namespace Morphy.UnitTests.ConditionalMapping;
 
 public class ClassBasedConditionTests
 {

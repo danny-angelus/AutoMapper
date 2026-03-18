@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+namespace Morphy.IntegrationTests;
 
 public class ParameterizedQueries(DatabaseFixture databaseFixture) : IntegrationTest<ParameterizedQueries.DatabaseInitializer>(databaseFixture)
 {

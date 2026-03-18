@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests
+namespace Morphy.IntegrationTests
 {
     namespace ValueTransformerTests
     {

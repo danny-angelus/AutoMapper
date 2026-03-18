@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class BasicFlattening : AutoMapperSpecBase
+public class BasicFlattening : MorphySpecBase
 {
     public class Address
     {
@@ -110,7 +110,7 @@ public class BasicFlattening : AutoMapperSpecBase
     }
 }
 
-public class NullFlattening : AutoMapperSpecBase
+public class NullFlattening : MorphySpecBase
 {
     Destination _destination;
 
@@ -145,7 +145,7 @@ public class NullFlattening : AutoMapperSpecBase
     }
 }
 
-public class NullTypeMapFlattening : AutoMapperSpecBase
+public class NullTypeMapFlattening : MorphySpecBase
 {
     private OrderDTO _dto;
 
@@ -227,5 +227,5 @@ public class FlatteningWithSourceValidation : NonValidatingSpecBase
     protected override MapperConfiguration CreateConfiguration() => new(cfg => cfg.CreateMap<Customer, CustomerDTO>(MemberList.Source).ForMember(d=>d.Id, o=>o.MapFrom(s=>s.AnotherId)));
     [Fact]
     public void Should_validate() =>
-        new Action(AssertConfigurationIsValid).ShouldThrow<AutoMapperConfigurationException>().Errors.Single().UnmappedPropertyNames.Single().ShouldBe(nameof(Address.Id));
+        new Action(AssertConfigurationIsValid).ShouldThrow<MorphyConfigurationException>().Errors.Single().UnmappedPropertyNames.Single().ShouldBe(nameof(Address.Id));
 }

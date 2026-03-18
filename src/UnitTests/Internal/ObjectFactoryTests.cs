@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
 using Execution;
 public class ObjectFactoryTests

@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests
+namespace Morphy.UnitTests
 {
     namespace Source
     {
@@ -69,7 +69,7 @@
         }
     }
 
-    public class PreserveReferencesWithInheritance : AutoMapperSpecBase
+    public class PreserveReferencesWithInheritance : MorphySpecBase
     {
         List<Target.Member> _destination;
 

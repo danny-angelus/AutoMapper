@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Projection
+namespace Morphy.UnitTests.Projection
 {
     namespace InheritedMaps
     {
@@ -17,7 +17,7 @@
             public int Value { get; set; }
         }
 
-        public class When_projecting_and_inheriting_maps : AutoMapperSpecBase
+        public class When_projecting_and_inheriting_maps : MorphySpecBase
         {
             private Dest[] _dest;
 

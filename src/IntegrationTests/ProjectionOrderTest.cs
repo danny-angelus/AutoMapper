@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+namespace Morphy.IntegrationTests;
 
 public class ProjectionOrderTest(DatabaseFixture databaseFixture) : IntegrationTest<ProjectionOrderTest.DatabaseInitializer>(databaseFixture)
 {

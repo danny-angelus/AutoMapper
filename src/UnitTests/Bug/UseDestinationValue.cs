@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Bug;
-public class UseDestinationValueNullable : AutoMapperSpecBase
+namespace Morphy.UnitTests.Bug;
+public class UseDestinationValueNullable : MorphySpecBase
 {
     class Source
     {
@@ -14,7 +14,7 @@ public class UseDestinationValueNullable : AutoMapperSpecBase
     [Fact]
     public void Should_keep_existing_value() => Map<Destination>(new Source()).Value.ShouldBe(42);
 }
-public class UseDestinationValue : AutoMapperSpecBase
+public class UseDestinationValue : MorphySpecBase
 {
     public class OrganizationDTO
     {
@@ -197,7 +197,7 @@ public class DontUseDestinationValue : NonValidatingSpecBase
         var orgDto = new OrganizationDTO { ID = 5, Name = "O1" };
         orgDto.BranchCollection.Models = new BranchDTO[] { branchDto };
 
-        new Action(()=>Mapper.Map<Organization>(orgDto)).ShouldThrowException<AutoMapperMappingException>(
+        new Action(()=>Mapper.Map<Organization>(orgDto)).ShouldThrowException<MorphyMappingException>(
             ex=>ex.InnerException.Message.ShouldStartWith(typeof(CollectionController<Branch, short, EventArgs>) + " needs to have a constructor with 0 args or only optional args"));
     }
 }

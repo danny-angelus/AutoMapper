@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "path": "Morphy.slnx",
+    "projects": [
+      "src\\Morphy\\Morphy.csproj",
+      "src\\Morphy.DI.Tests\\Morphy.DI.Tests.csproj",
+      "src\\UnitTests\\Morphy.UnitTests.csproj"
+    ]
+  }
+}

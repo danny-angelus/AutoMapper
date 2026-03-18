@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
+namespace Morphy.UnitTests.MappingInheritance;
 
-public class ApplyIncludeBaseRecursively : AutoMapperSpecBase
+public class ApplyIncludeBaseRecursively : MorphySpecBase
 {
     ViewModel _destination;
 
@@ -44,7 +44,7 @@ public class ApplyIncludeBaseRecursively : AutoMapperSpecBase
         _destination.Property2.ShouldBe("Test");
     }
 }
-public class IncludeOrder : AutoMapperSpecBase
+public class IncludeOrder : MorphySpecBase
 {
     public interface IDevice
     {

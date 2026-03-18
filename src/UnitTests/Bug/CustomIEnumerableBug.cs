@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
 public class One
 {
@@ -26,7 +26,7 @@ public class StringToItemConverter : ITypeConverter<IEnumerable<string>, IEnumer
         return result;
     }
 }
-public class AutoMapperBugTest
+public class MorphyBugTest
 {
     [Fact]
     public void ShouldMapOneToTwo()

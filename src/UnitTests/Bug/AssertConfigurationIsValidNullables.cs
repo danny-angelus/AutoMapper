@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class AssertConfigurationIsValidNullables : AutoMapperSpecBase
+public class AssertConfigurationIsValidNullables : MorphySpecBase
 {
     class Source
     {

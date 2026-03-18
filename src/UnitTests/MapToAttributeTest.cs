@@ -1,6 +1,6 @@
-﻿using AutoMapper.Configuration.Conventions;
+using Morphy.Configuration.Conventions;
 
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
 public abstract class SourceToDestinationMapperAttribute : Attribute
 {
@@ -47,7 +47,7 @@ public class SourceToDestinationNameMapperAttributesMember : ISourceToDestinatio
         public SourceToDestinationMapperAttribute Attribute { get; }
     }
 }
-public class MapToAttributeTest : AutoMapperSpecBase
+public class MapToAttributeTest : MorphySpecBase
 {
     public class CategoryDto
     {

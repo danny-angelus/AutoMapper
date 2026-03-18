@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class MultipleInterfaceInheritance : AutoMapperSpecBase
+public class MultipleInterfaceInheritance : MorphySpecBase
 {
     private ThingDto _thingDto;
 

@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class NullSubstitutes : AutoMapperSpecBase
+namespace Morphy.UnitTests.Projection;
+public class NullSubstitutes : MorphySpecBase
 {
     private List<Dest> _dests;
 
@@ -32,7 +32,7 @@ public class NullSubstitutes : AutoMapperSpecBase
     }
 }
 
-public class NullSubstitutesWithMapFrom : AutoMapperSpecBase
+public class NullSubstitutesWithMapFrom : MorphySpecBase
 {
     private List<Dest> _dests;
 

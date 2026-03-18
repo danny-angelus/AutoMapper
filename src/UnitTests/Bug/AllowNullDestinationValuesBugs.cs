@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class When_mapping_to_an_assignable_object_with_nullable_off : AutoMapperSpecBase
+public class When_mapping_to_an_assignable_object_with_nullable_off : MorphySpecBase
 {
     private Destination _destination;
 
@@ -41,7 +41,7 @@ public class When_mapping_to_an_assignable_object_with_nullable_off : AutoMapper
         _destination.SomeOtherProperty.ShouldNotBeNull();
     }
 }
-public class When_AllowNullDestinationValues_is_false : AutoMapperSpecBase
+public class When_AllowNullDestinationValues_is_false : MorphySpecBase
 {
     public class Source
     {

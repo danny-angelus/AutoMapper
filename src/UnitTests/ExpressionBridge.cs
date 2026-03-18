@@ -1,6 +1,6 @@
-using AutoMapper.QueryableExtensions.Impl;
+using Morphy.QueryableExtensions.Impl;
 
-namespace AutoMapper.UnitTests
+namespace Morphy.UnitTests
 {
     public static class ExpressionBuilderExtensions
     {
@@ -249,7 +249,7 @@ namespace AutoMapper.UnitTests
             public C Value { get; set; }
         }
 
-        public class When_mapping_circular_references : AutoMapperSpecBase
+        public class When_mapping_circular_references : MorphySpecBase
         {
             private IQueryable<BEntity> _bei;
 

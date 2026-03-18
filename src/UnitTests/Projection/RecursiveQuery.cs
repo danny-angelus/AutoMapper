@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+namespace Morphy.UnitTests.Projection;
 
-public class RecursiveQuery : AutoMapperSpecBase
+public class RecursiveQuery : MorphySpecBase
 {
     class Source
     {

@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class ToStringTests : AutoMapperSpecBase
+namespace Morphy.UnitTests.Projection;
+public class ToStringTests : MorphySpecBase
 {
     private Dest[] _dests;
 
@@ -38,7 +38,7 @@ public class ToStringTests : AutoMapperSpecBase
     }
 }
 
-public class NullableToStringTests : AutoMapperSpecBase
+public class NullableToStringTests : MorphySpecBase
 {
     private Dest[] _dests;
 

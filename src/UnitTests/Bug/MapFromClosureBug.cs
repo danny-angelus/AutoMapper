@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 public class MapFromClosureBug : NonValidatingSpecBase
 {
     private static readonly IDateProvider _dateProvider = new DateProvider();

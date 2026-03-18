@@ -1,6 +1,6 @@
-﻿using System.Dynamic;
+using System.Dynamic;
 
-namespace AutoMapper.UnitTests.Mappers.Dynamic;
+namespace Morphy.UnitTests.Mappers.Dynamic;
 
 class Destination
 {

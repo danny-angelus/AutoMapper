@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class ProjectConstructorParameters : AutoMapperSpecBase
+public class ProjectConstructorParameters : MorphySpecBase
 {
     SourceDto _dest;
     const int SomeValue = 15;

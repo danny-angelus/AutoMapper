@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 public class TypeExtensionsTests
 {
     public class Foo

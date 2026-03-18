@@ -1,6 +1,6 @@
-﻿using AutoMapper.QueryableExtensions.Impl;
-namespace AutoMapper.UnitTests.Projection;
-public class ProjectionMappers : AutoMapperSpecBase
+using Morphy.QueryableExtensions.Impl;
+namespace Morphy.UnitTests.Projection;
+public class ProjectionMappers : MorphySpecBase
 {
     class Source
     {

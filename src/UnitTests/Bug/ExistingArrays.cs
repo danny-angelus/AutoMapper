@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class ExistingArrays : AutoMapperSpecBase
+public class ExistingArrays : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

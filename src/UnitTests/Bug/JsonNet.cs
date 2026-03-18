@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
 using StringKeyValuePair = KeyValuePair<string, string>;
 
-public class JsonNetDictionary : AutoMapperSpecBase
+public class JsonNetDictionary : MorphySpecBase
 {
     private Destination _destination;
 
@@ -52,7 +52,7 @@ public class JsonNetDictionary : AutoMapperSpecBase
     }
 }
 
-public class JObjectField : AutoMapperSpecBase
+public class JObjectField : MorphySpecBase
 {
     class JContainer : IEnumerable<DBNull>
     {

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
+namespace Morphy.UnitTests.MappingInheritance;
 
-public class IncludeAllDerived : AutoMapperSpecBase
+public class IncludeAllDerived : MorphySpecBase
 {
     public class A
     {

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
+namespace Morphy.UnitTests.MappingInheritance;
 
-public class IncludeBaseShouldNotCreateMaps : AutoMapperSpecBase
+public class IncludeBaseShouldNotCreateMaps : MorphySpecBase
 {
     public abstract class BaseBaseSource { }
     public class BaseSource : BaseBaseSource

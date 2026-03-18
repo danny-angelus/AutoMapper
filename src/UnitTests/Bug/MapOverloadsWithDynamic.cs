@@ -1,8 +1,8 @@
-﻿using System.Dynamic;
+using System.Dynamic;
 
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class MapOverloadsWithDynamic : AutoMapperSpecBase
+public class MapOverloadsWithDynamic : MorphySpecBase
 {
     Settings _settings;
 

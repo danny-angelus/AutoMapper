@@ -1,9 +1,9 @@
-﻿using Microsoft.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
 using Testcontainers.MsSql;
 
-namespace AutoMapper.IntegrationTests;
+namespace Morphy.IntegrationTests;
 
 [CollectionDefinition(nameof(DatabaseFixture))]
 public class DatabaseCollection : ICollectionFixture<DatabaseFixture>
@@ -30,7 +30,7 @@ public class DatabaseFixture : IAsyncLifetime
 }
 
 [Collection(nameof(DatabaseFixture))]
-public abstract class IntegrationTest<TDbContextFixture> : AutoMapperSpecBase, IAsyncLifetime
+public abstract class IntegrationTest<TDbContextFixture> : MorphySpecBase, IAsyncLifetime
     where TDbContextFixture : IDbContextFixture, new()
 {
     private readonly DatabaseFixture _databaseFixture;

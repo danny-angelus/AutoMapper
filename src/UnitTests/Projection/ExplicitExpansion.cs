@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class ExplicitExpansion : AutoMapperSpecBase
+namespace Morphy.UnitTests.Projection;
+public class ExplicitExpansion : MorphySpecBase
 {
     private Dest[] _dests;
 

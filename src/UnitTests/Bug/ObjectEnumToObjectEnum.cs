@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class ObjectEnumToObjectEnum : AutoMapperSpecBase
+public class ObjectEnumToObjectEnum : MorphySpecBase
 {
     Target _target;
 

@@ -1,6 +1,6 @@
-﻿using System.Reflection.Emit;
+using System.Reflection.Emit;
 
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
 public class NullConstructorParameterName
 {

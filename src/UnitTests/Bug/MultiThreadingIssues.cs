@@ -1,6 +1,6 @@
-﻿using System.Linq;
+using System.Linq;
 
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 public class MultiThreadingIssues
 {
     public class Type1

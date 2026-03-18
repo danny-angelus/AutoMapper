@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Mappers;
+namespace Morphy.UnitTests.Mappers;
 
-public class ConstructorMapperTests : AutoMapperSpecBase
+public class ConstructorMapperTests : MorphySpecBase
 {
     class Destination
     {

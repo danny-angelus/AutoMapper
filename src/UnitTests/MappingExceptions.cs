@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests.MappingExceptions;
+namespace Morphy.UnitTests.MappingExceptions;
 
 public class When_encountering_a_member_mapping_problem_during_mapping : NonValidatingSpecBase
 {
@@ -21,19 +21,19 @@ public class When_encountering_a_member_mapping_problem_during_mapping : NonVali
     public void Should_provide_a_contextual_exception()
     {
         var source = new Source { Value = "adsf" };
-        typeof(AutoMapperMappingException).ShouldBeThrownBy(() => Mapper.Map<Source, Dest>(source));
+        typeof(MorphyMappingException).ShouldBeThrownBy(() => Mapper.Map<Source, Dest>(source));
     }
 
     [Fact]
     public void Should_have_contextual_mapping_information()
     {
         var source = new Source { Value = "adsf" };
-        AutoMapperMappingException thrown = null;
+        MorphyMappingException thrown = null;
         try
         {
             Mapper.Map<Source, Dest>(source);
         }
-        catch (AutoMapperMappingException ex)
+        catch (MorphyMappingException ex)
         {
             thrown = ex;
         }
@@ -70,19 +70,19 @@ public class When_encountering_a_path_mapping_problem_during_mapping : NonValida
     public void Should_provide_a_contextual_exception()
     {
         var source = new Source { Value = "adsf" };
-        typeof(AutoMapperMappingException).ShouldBeThrownBy(() => Mapper.Map<Source, Dest>(source));
+        typeof(MorphyMappingException).ShouldBeThrownBy(() => Mapper.Map<Source, Dest>(source));
     }
 
     [Fact]
     public void Should_have_contextual_mapping_information()
     {
         var source = new Source { Value = "adsf" };
-        AutoMapperMappingException thrown = null;
+        MorphyMappingException thrown = null;
         try
         {
             Mapper.Map<Source, Dest>(source);
         }
-        catch (AutoMapperMappingException ex)
+        catch (MorphyMappingException ex)
         {
             thrown = ex;
         }

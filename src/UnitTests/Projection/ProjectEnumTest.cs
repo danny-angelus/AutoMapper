@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+namespace Morphy.UnitTests.Projection;
 public class ProjectEnumTest
 {
     private MapperConfiguration _config;
@@ -47,7 +47,7 @@ public class ProjectEnumTest
     }
 }
 
-public class ProjectionOverrides : AutoMapperSpecBase
+public class ProjectionOverrides : MorphySpecBase
 {
     public class Source
     {

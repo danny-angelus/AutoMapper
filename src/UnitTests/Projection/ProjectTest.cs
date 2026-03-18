@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class ProjectWithFields : AutoMapperSpecBase
+namespace Morphy.UnitTests.Projection;
+public class ProjectWithFields : MorphySpecBase
 {
     public class Foo
     {

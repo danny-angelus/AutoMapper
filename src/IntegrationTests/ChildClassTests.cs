@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests
+namespace Morphy.IntegrationTests
 {
     namespace ChildClassTests
     {
@@ -60,7 +60,7 @@
             });
 
             [Fact]
-            public void AutoMapperEFRelationsTest()
+            public void MorphyEFRelationsTest()
             {
                 using (var context = Fixture.CreateContext())
                 {
@@ -93,7 +93,7 @@
                 }
             }
             [Fact]
-            public void MapShouldThrow() => new Action(() => Mapper.Map<SubDTO>(new Sub())).ShouldThrow<AutoMapperConfigurationException>().Message.ShouldBe("CreateProjection works with ProjectTo, not with Map.");
+            public void MapShouldThrow() => new Action(() => Mapper.Map<SubDTO>(new Sub())).ShouldThrow<MorphyConfigurationException>().Message.ShouldBe("CreateProjection works with ProjectTo, not with Map.");
         }
     }
 }

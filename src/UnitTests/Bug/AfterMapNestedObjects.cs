@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class AfterMapNestedObjects : AutoMapperSpecBase
+public class AfterMapNestedObjects : MorphySpecBase
 {
     bool _afterMapCalled;
 

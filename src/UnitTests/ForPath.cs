@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class InheritForPath : AutoMapperSpecBase
+public class InheritForPath : MorphySpecBase
 {
     public class RootModel
     {
@@ -61,7 +61,7 @@ public class InheritForPath : AutoMapperSpecBase
     }
 }
 
-public class ForPath : AutoMapperSpecBase
+public class ForPath : MorphySpecBase
 {
     public class Order
     {
@@ -102,7 +102,7 @@ public class ForPath : AutoMapperSpecBase
     }
 }
 
-public class ForPathWithoutSettersForSubObjects : AutoMapperSpecBase
+public class ForPathWithoutSettersForSubObjects : MorphySpecBase
 {
     public class Order
     {
@@ -136,12 +136,12 @@ public class ForPathWithoutSettersForSubObjects : AutoMapperSpecBase
     [Fact]
     public void Should_unflatten()
     {
-        new Action(() => Mapper.Map<Order>(new OrderDto())).ShouldThrowException<AutoMapperMappingException>(ex =>
+        new Action(() => Mapper.Map<Order>(new OrderDto())).ShouldThrowException<MorphyMappingException>(ex =>
               ex.InnerException?.Message.ShouldBe("typeMapDestination.CustomerHolder.Customer cannot be null because it's used by ForPath."));
     }
 }
 
-public class ForPathWithoutSettersShouldBehaveAsForMember : AutoMapperSpecBase
+public class ForPathWithoutSettersShouldBehaveAsForMember : MorphySpecBase
 {
     public class Order
     {
@@ -185,7 +185,7 @@ public class ForPathWithoutSettersShouldBehaveAsForMember : AutoMapperSpecBase
     }
 }
 
-public class ForPathWithIgnoreShouldNotSetValue : AutoMapperSpecBase
+public class ForPathWithIgnoreShouldNotSetValue : MorphySpecBase
 {
     public partial class TimesheetModel
     {
@@ -250,7 +250,7 @@ public class ForPathWithNullExpressionShouldFail
     [Fact]
     public void Should_throw_exception()
     {
-        Assert.Throws<AutoMapperMappingException>(() =>
+        Assert.Throws<MorphyMappingException>(() =>
         {
             var cfg = new MapperConfiguration(config =>
             {
@@ -264,7 +264,7 @@ public class ForPathWithNullExpressionShouldFail
     }
 }
 
-public class ForPathWithPrivateSetters : AutoMapperSpecBase
+public class ForPathWithPrivateSetters : MorphySpecBase
 {
     public class Order
     {
@@ -305,7 +305,7 @@ public class ForPathWithPrivateSetters : AutoMapperSpecBase
     }
 }
 
-public class ForPathWithValueTypesAndFields : AutoMapperSpecBase
+public class ForPathWithValueTypesAndFields : MorphySpecBase
 {
     public struct Order
     {
@@ -346,7 +346,7 @@ public class ForPathWithValueTypesAndFields : AutoMapperSpecBase
     }
 }
 
-public class ForPathWithConditions : AutoMapperSpecBase
+public class ForPathWithConditions : MorphySpecBase
 {
     public class Order
     {

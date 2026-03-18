@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests;
-public class ExplicitMapperCreation : AutoMapperSpecBase
+namespace Morphy.UnitTests;
+public class ExplicitMapperCreation : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() =>new(cfg => cfg.CreateMap<Source, Dest>());
     public class Source

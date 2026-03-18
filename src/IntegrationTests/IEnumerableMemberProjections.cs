@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+namespace Morphy.IntegrationTests;
 public class IEnumerableMemberProjections(DatabaseFixture databaseFixture) : IntegrationTest<IEnumerableMemberProjections.DatabaseInitializer>(databaseFixture)
 {
     public class Customer

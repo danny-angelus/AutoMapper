@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests.Mappers;
+namespace Morphy.UnitTests.Mappers;
 
 public class TypeHelperTests
 {

@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.ForAllMembers;
-public class When_conditionally_applying_a_resolver_globally : AutoMapperSpecBase
+namespace Morphy.UnitTests.ForAllMembers;
+public class When_conditionally_applying_a_resolver_globally : MorphySpecBase
 {
     public class Source
     {
@@ -43,7 +43,7 @@ public class When_conditionally_applying_a_resolver_globally : AutoMapperSpecBas
         dest.OtherDate.ShouldBe(source.OtherDate.AddDays(1));
     }
 }
-public class When_conditionally_applying_a_resolver_per_profile : AutoMapperSpecBase
+public class When_conditionally_applying_a_resolver_per_profile : MorphySpecBase
 {
     public class Source
     {
@@ -77,7 +77,7 @@ public class When_conditionally_applying_a_resolver_per_profile : AutoMapperSpec
         dest.OtherDate.ShouldBe(source.OtherDate.AddDays(1));
     }
 }
-public class ForAllPropertyMaps_ConvertUsing : AutoMapperSpecBase
+public class ForAllPropertyMaps_ConvertUsing : MorphySpecBase
 {
     public class Well
     {

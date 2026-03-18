@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class DuplicateExtensionMethods : AutoMapperSpecBase
+public class DuplicateExtensionMethods : MorphySpecBase
 {
     public class Outlay
     {

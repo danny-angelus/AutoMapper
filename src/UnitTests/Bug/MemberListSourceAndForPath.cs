@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class MemberListSourceAndForPath : AutoMapperSpecBase
+public class MemberListSourceAndForPath : MorphySpecBase
 {
     bool _equal;
 

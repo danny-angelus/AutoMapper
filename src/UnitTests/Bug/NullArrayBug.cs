@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Bug;
-public class NullArrayBug : AutoMapperSpecBase
+namespace Morphy.UnitTests.Bug;
+public class NullArrayBug : MorphySpecBase
 {
     private static Source _source;
     private Destination _destination;

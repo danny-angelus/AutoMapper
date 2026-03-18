@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class NullableTypeConverter : AutoMapperSpecBase
+public class NullableTypeConverter : MorphySpecBase
 {
     Destination _destination;
 
@@ -44,7 +44,7 @@ public class NullableTypeConverter : AutoMapperSpecBase
     }
 }
 
-public class CustomConverters : AutoMapperSpecBase
+public class CustomConverters : MorphySpecBase
 {
     public class NullableIntToBoolConverter : ITypeConverter<int?, bool>
     {

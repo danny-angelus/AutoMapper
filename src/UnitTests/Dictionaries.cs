@@ -1,9 +1,9 @@
-namespace AutoMapper.UnitTests
+namespace Morphy.UnitTests
 {
     namespace Dictionaries
     {
         //[Explicit("Need to resolve the assignable collection bug as well")]
-        //public class When_mapping_to_a_non_generic_dictionary : AutoMapperSpecBase
+        //public class When_mapping_to_a_non_generic_dictionary : MorphySpecBase
         //{
         //    private Destination _result;
 
@@ -46,7 +46,7 @@ namespace AutoMapper.UnitTests
         //    }
         //}
 
-        public class When_mapping_to_a_generic_dictionary_with_mapped_value_pairs : AutoMapperSpecBase
+        public class When_mapping_to_a_generic_dictionary_with_mapped_value_pairs : MorphySpecBase
         {
             private Destination _result;
 
@@ -100,7 +100,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_mapping_to_a_generic_dictionary_interface_with_mapped_value_pairs : AutoMapperSpecBase
+        public class When_mapping_to_a_generic_dictionary_interface_with_mapped_value_pairs : MorphySpecBase
         {
             private Destination _result;
 
@@ -154,7 +154,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_mapping_from_a_source_with_a_null_dictionary_member : AutoMapperSpecBase
+        public class When_mapping_from_a_source_with_a_null_dictionary_member : MorphySpecBase
         {
             private FooDto _result;
 
@@ -197,7 +197,7 @@ namespace AutoMapper.UnitTests
         }
 
 
-        public class When_mapping_to_a_generic_dictionary_that_does_not_use_keyvaluepairs : AutoMapperSpecBase
+        public class When_mapping_to_a_generic_dictionary_that_does_not_use_keyvaluepairs : MorphySpecBase
         {
             private System.Collections.Generic.IDictionary<string, string> _dest;
 
@@ -405,7 +405,7 @@ namespace AutoMapper.UnitTests
 
         }
 
-        public class When_mapping_from_a_list_of_object_to_generic_dictionary : AutoMapperSpecBase    
+        public class When_mapping_from_a_list_of_object_to_generic_dictionary : MorphySpecBase    
         {
             private FooObject _result;
 
@@ -456,7 +456,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_mapping_nongeneric_type_inherited_from_dictionary : AutoMapperSpecBase
+        public class When_mapping_nongeneric_type_inherited_from_dictionary : MorphySpecBase
         {
             public class BaseClassWithDictionary
             {
@@ -479,7 +479,7 @@ namespace AutoMapper.UnitTests
         }
     }
 
-    public class When_mapping_from_a_list_of_object_to_IReadOnly_dictionary : AutoMapperSpecBase
+    public class When_mapping_from_a_list_of_object_to_IReadOnly_dictionary : MorphySpecBase
     {
         private FooObject _result;
 
@@ -530,7 +530,7 @@ namespace AutoMapper.UnitTests
         }
     }
 
-    public class When_mapping_from_a_list_of_object_to_readonly_dictionary : AutoMapperSpecBase
+    public class When_mapping_from_a_list_of_object_to_readonly_dictionary : MorphySpecBase
     {
         private FooObject _result;
 

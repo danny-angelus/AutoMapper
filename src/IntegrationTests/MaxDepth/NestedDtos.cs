@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.MaxDepth;
+namespace Morphy.IntegrationTests.MaxDepth;
 
 public class NestedDtos(DatabaseFixture databaseFixture) : IntegrationTest<NestedDtos.DatabaseInitializer>(databaseFixture)
 {

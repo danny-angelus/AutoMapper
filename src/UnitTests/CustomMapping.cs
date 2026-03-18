@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class When_implementing_multiple_IValueResolver_interfaces : AutoMapperSpecBase
+public class When_implementing_multiple_IValueResolver_interfaces : MorphySpecBase
 {
     public class Source1 { }
 
@@ -38,7 +38,7 @@ public class When_implementing_multiple_IValueResolver_interfaces : AutoMapperSp
     }
 }
 
-public class When_using_IMemberResolver_derived_interface : AutoMapperSpecBase
+public class When_using_IMemberResolver_derived_interface : MorphySpecBase
 {
     Destination _destination;
 
@@ -81,7 +81,7 @@ public class When_using_IMemberResolver_derived_interface : AutoMapperSpecBase
     }
 }
 
-public class OpenGenericMapForMember : AutoMapperSpecBase
+public class OpenGenericMapForMember : MorphySpecBase
 {
     ModelPager<int> _destination;
     int[] _items = Enumerable.Range(1, 10).ToArray();
@@ -156,7 +156,7 @@ public class OpenGenericMapForMember : AutoMapperSpecBase
     } 
 }
 
-public class IntToNullableIntConverter : AutoMapperSpecBase
+public class IntToNullableIntConverter : MorphySpecBase
 {
     Destination _destination;
 
@@ -200,7 +200,7 @@ public class IntToNullableIntConverter : AutoMapperSpecBase
     }
 }
 
-public class When_throwing_NRE_from_MapFrom_value_types : AutoMapperSpecBase
+public class When_throwing_NRE_from_MapFrom_value_types : MorphySpecBase
 {
     ViewModel _viewModel;
 
@@ -247,7 +247,7 @@ public class When_throwing_NRE_from_MapFrom_value_types : AutoMapperSpecBase
     }
 }
 
-public class When_throwing_NRE_from_MapFrom : AutoMapperSpecBase
+public class When_throwing_NRE_from_MapFrom : MorphySpecBase
 {
     class Source
     {
@@ -271,7 +271,7 @@ public class When_throwing_NRE_from_MapFrom : AutoMapperSpecBase
     }
 }
 
-public class When_using_value_with_mismatched_properties : AutoMapperSpecBase
+public class When_using_value_with_mismatched_properties : MorphySpecBase
 {
     Destination _destination;
     static Guid _guid = Guid.NewGuid();
@@ -300,7 +300,7 @@ public class When_using_value_with_mismatched_properties : AutoMapperSpecBase
     }
 }
 
-public class When_custom_resolving_mismatched_properties : AutoMapperSpecBase
+public class When_custom_resolving_mismatched_properties : MorphySpecBase
 {
     Destination _destination;
     static Guid _guid = Guid.NewGuid();
@@ -359,11 +359,11 @@ public class When_resolve_throws : NonValidatingSpecBase
     [Fact]
     public void Should_propagate_exception()
     {
-        new Action(()=>Mapper.Map<Destination>(new Source())).ShouldThrowException<AutoMapperMappingException>(e=>e.InnerException.ShouldBe(_ex));
+        new Action(()=>Mapper.Map<Destination>(new Source())).ShouldThrowException<MorphyMappingException>(e=>e.InnerException.ShouldBe(_ex));
     }
 }
 
-public class When_mapping_different_types_with_explicit_value : AutoMapperSpecBase
+public class When_mapping_different_types_with_explicit_value : MorphySpecBase
 {
     Destination _destination;
 
@@ -404,7 +404,7 @@ public class When_mapping_different_types_with_explicit_value : AutoMapperSpecBa
     }
 }
 
-public class When_mapping_different_types_with_ResolveUsing : AutoMapperSpecBase
+public class When_mapping_different_types_with_ResolveUsing : MorphySpecBase
 {
     Destination _destination;
 
@@ -446,7 +446,7 @@ public class When_mapping_different_types_with_ResolveUsing : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_from_object_to_string_with_use_value : AutoMapperSpecBase
+public class When_mapping_from_object_to_string_with_use_value : MorphySpecBase
 {
     Destination _destination;
 
@@ -474,7 +474,7 @@ public class When_mapping_from_object_to_string_with_use_value : AutoMapperSpecB
     }
 }
 
-public class When_mapping_from_object_to_string : AutoMapperSpecBase
+public class When_mapping_from_object_to_string : MorphySpecBase
 {
     Destination _destination;
 
@@ -503,7 +503,7 @@ public class When_mapping_from_object_to_string : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_a_dto_member_with_custom_mapping : AutoMapperSpecBase
+public class When_mapping_to_a_dto_member_with_custom_mapping : MorphySpecBase
 {
     private ModelDto _result;
 
@@ -581,7 +581,7 @@ public class When_mapping_to_a_dto_member_with_custom_mapping : AutoMapperSpecBa
     }
 }
 
-public class When_using_a_custom_resolver_for_a_child_model_property_instead_of_the_model : AutoMapperSpecBase
+public class When_using_a_custom_resolver_for_a_child_model_property_instead_of_the_model : MorphySpecBase
 {
     private ModelDto _result;
 
@@ -630,7 +630,7 @@ public class When_using_a_custom_resolver_for_a_child_model_property_instead_of_
     }
 }
 
-public class When_reseting_a_mapping_to_use_a_resolver_to_a_different_member : AutoMapperSpecBase
+public class When_reseting_a_mapping_to_use_a_resolver_to_a_different_member : MorphySpecBase
 {
     private Dest _result;
 
@@ -679,7 +679,7 @@ public class When_reseting_a_mapping_to_use_a_resolver_to_a_different_member : A
     }
 }
 
-public class When_reseting_a_mapping_from_a_property_to_a_method : AutoMapperSpecBase
+public class When_reseting_a_mapping_from_a_property_to_a_method : MorphySpecBase
 {
     private Dest _result;
 
@@ -717,7 +717,7 @@ public class When_reseting_a_mapping_from_a_property_to_a_method : AutoMapperSpe
     }
 }
 
-public class When_specifying_a_custom_constructor_and_member_resolver : AutoMapperSpecBase
+public class When_specifying_a_custom_constructor_and_member_resolver : MorphySpecBase
 {
     private Source _source;
     private Destination _dest;
@@ -777,7 +777,7 @@ public class When_specifying_a_custom_constructor_and_member_resolver : AutoMapp
     }
 }
 
-public class When_specifying_a_member_resolver_and_custom_constructor : AutoMapperSpecBase
+public class When_specifying_a_member_resolver_and_custom_constructor : MorphySpecBase
 {
     private Source _source;
     private Destination _dest;
@@ -1038,7 +1038,7 @@ public class When_specifying_a_custom_translator_using_generics
     }
 }
 
-public class When_specifying_a_custom_constructor_function_for_custom_converters : AutoMapperSpecBase
+public class When_specifying_a_custom_constructor_function_for_custom_converters : MorphySpecBase
 {
     private Destination _result;
 
@@ -1092,7 +1092,7 @@ public class When_specifying_a_custom_constructor_function_for_custom_converters
 }
 
 
-public class When_specifying_a_custom_translator_with_mismatched_properties : AutoMapperSpecBase
+public class When_specifying_a_custom_translator_with_mismatched_properties : MorphySpecBase
 {
     public class Source
     {
@@ -1129,7 +1129,7 @@ public class When_specifying_a_custom_translator_with_mismatched_properties : Au
     }
 }
 
-public class When_configuring_a_global_constructor_function_for_resolvers : AutoMapperSpecBase
+public class When_configuring_a_global_constructor_function_for_resolvers : MorphySpecBase
 {
     private Destination _result;
 
@@ -1180,7 +1180,7 @@ public class When_configuring_a_global_constructor_function_for_resolvers : Auto
 }
 
 
-public class When_custom_resolver_requests_property_to_be_ignored : AutoMapperSpecBase
+public class When_custom_resolver_requests_property_to_be_ignored : MorphySpecBase
 {
     private Destination _result = new Destination() { Value = 55 };
 
@@ -1220,7 +1220,7 @@ public class When_custom_resolver_requests_property_to_be_ignored : AutoMapperSp
     }
 }
 
-public class When_using_inheritance_with_value_resoluvers : AutoMapperSpecBase
+public class When_using_inheritance_with_value_resoluvers : MorphySpecBase
 {
     public class SourceDto
     {
@@ -1279,7 +1279,7 @@ public class When_using_inheritance_with_value_resoluvers : AutoMapperSpecBase
 }
 
 
-public class When_specifying_member_and_member_resolver_using_string_property_names : AutoMapperSpecBase
+public class When_specifying_member_and_member_resolver_using_string_property_names : MorphySpecBase
 {
     private Destination _result;
 
@@ -1394,7 +1394,7 @@ public class When_specifying_a_custom_member_mapping_with_a_cast : NonValidating
     }
 }
 
-public class When_destination_property_does_not_have_a_setter : AutoMapperSpecBase
+public class When_destination_property_does_not_have_a_setter : MorphySpecBase
 {
     private Source _source;
     private Destination _dest;
@@ -1460,7 +1460,7 @@ public class When_destination_property_does_not_have_a_setter : AutoMapperSpecBa
     }
 }
 
-public class When_destination_property_does_not_have_a_getter : AutoMapperSpecBase
+public class When_destination_property_does_not_have_a_getter : MorphySpecBase
 {
     private Source _source;
     private Destination _dest;
@@ -1541,7 +1541,7 @@ public class When_destination_property_does_not_have_a_getter : AutoMapperSpecBa
 }
 
 
-public class When_destination_type_requires_a_constructor : AutoMapperSpecBase
+public class When_destination_type_requires_a_constructor : MorphySpecBase
 {
     private Destination _destination;
 
@@ -1586,7 +1586,7 @@ public class When_destination_type_requires_a_constructor : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_from_a_constant_value : AutoMapperSpecBase
+public class When_mapping_from_a_constant_value : MorphySpecBase
 {
     private Dest _dest;
 
@@ -1648,7 +1648,7 @@ public class When_building_custom_configuration_mapping_to_itself
     }
 }
 
-public class When_mapping_from_one_type_to_another : AutoMapperSpecBase
+public class When_mapping_from_one_type_to_another : MorphySpecBase
 {
     private Dest _dest;
 
@@ -1659,7 +1659,7 @@ public class When_mapping_from_one_type_to_another : AutoMapperSpecBase
 
     public class Dest
     {
-        // AutoMapper tries to map source to this constructor's parameter,
+        // Morphy tries to map source to this constructor's parameter,
         // but does not take its member configuration into account
         public Dest(int value)
         {

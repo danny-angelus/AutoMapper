@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class NestedMappingProjectionsExplicitExpanding : AutoMapperSpecBase
+public class NestedMappingProjectionsExplicitExpanding : MorphySpecBase
 {
     Fu _destination;
     int _propValue = 23;

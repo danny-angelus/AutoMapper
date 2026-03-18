@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class ProjectUsingTheQueriedEntity : AutoMapperSpecBase
+public class ProjectUsingTheQueriedEntity : MorphySpecBase
 {
     private Destination _destination;
 

@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.BuiltInTypes;
+namespace Morphy.IntegrationTests.BuiltInTypes;
 
 public class NullableLongToLong(DatabaseFixture databaseFixture) : IntegrationTest<NullableLongToLong.DatabaseInitializer>(databaseFixture)
 {

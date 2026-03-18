@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class ReverseMapAndReplaceMemberName : AutoMapperSpecBase
+public class ReverseMapAndReplaceMemberName : MorphySpecBase
 {
     const string SomeId = "someId";
     const string SomeOtherId = "someOtherId";
@@ -43,7 +43,7 @@ public class ReverseMapAndReplaceMemberName : AutoMapperSpecBase
     }
 }
 
-public class ReverseMapAndReplaceMemberNameWithProfile : AutoMapperSpecBase
+public class ReverseMapAndReplaceMemberNameWithProfile : MorphySpecBase
 {
     const string SomeId = "someId";
     const string SomeOtherId = "someOtherId";

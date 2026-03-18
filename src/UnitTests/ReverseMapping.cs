@@ -1,8 +1,8 @@
 using System.Text.RegularExpressions;
 
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class ReverseMapWithStaticField : AutoMapperSpecBase
+public class ReverseMapWithStaticField : MorphySpecBase
 {
     class Source
     {
@@ -52,7 +52,7 @@ public class InvalidReverseMap : NonValidatingSpecBase
     public void Should_report_the_error()
     {
         new Action(AssertConfigurationIsValid)
-            .ShouldThrowException((AutoMapperConfigurationException ex) =>
+            .ShouldThrowException((MorphyConfigurationException ex) =>
             {
                 ex.MemberMap.DestinationName.ShouldBe("Three");
                 ex.Types.ShouldBe(new TypePair(typeof(One), typeof(Two)));
@@ -60,7 +60,7 @@ public class InvalidReverseMap : NonValidatingSpecBase
     }
 }
 
-public class MapFromReverseResolveUsing : AutoMapperSpecBase
+public class MapFromReverseResolveUsing : MorphySpecBase
 {
     public class Source
     {
@@ -95,7 +95,7 @@ public class MapFromReverseResolveUsing : AutoMapperSpecBase
     }
 }
 
-public class MethodsWithReverse : AutoMapperSpecBase
+public class MethodsWithReverse : MorphySpecBase
 {
     class Order
     {
@@ -124,7 +124,7 @@ public class MethodsWithReverse : AutoMapperSpecBase
     }
 }
 
-public class ReverseForPath : AutoMapperSpecBase
+public class ReverseForPath : MorphySpecBase
 {
     public class Order
     {
@@ -170,7 +170,7 @@ public class ReverseForPath : AutoMapperSpecBase
     }
 }
 
-public class ReverseMapFrom : AutoMapperSpecBase
+public class ReverseMapFrom : MorphySpecBase
 {
     public class Order
     {
@@ -212,7 +212,7 @@ public class ReverseMapFrom : AutoMapperSpecBase
     }
 }
 
-public class ReverseMapFromNamingConvention : AutoMapperSpecBase
+public class ReverseMapFromNamingConvention : MorphySpecBase
 {
     public class OrderEntity
     {
@@ -244,7 +244,7 @@ public class ReverseMapFromNamingConvention : AutoMapperSpecBase
     }
 }
 
-public class ReverseMapFromSourceMemberName : AutoMapperSpecBase
+public class ReverseMapFromSourceMemberName : MorphySpecBase
 {
     public class Source
     {
@@ -272,7 +272,7 @@ public class ReverseMapFromSourceMemberName : AutoMapperSpecBase
     }
 }
 
-public class ReverseDefaultFlatteningWithIgnoreMember : AutoMapperSpecBase
+public class ReverseDefaultFlatteningWithIgnoreMember : MorphySpecBase
 {
     public class Order
     {
@@ -314,7 +314,7 @@ public class ReverseDefaultFlatteningWithIgnoreMember : AutoMapperSpecBase
     }
 }
 
-public class ReverseDefaultFlattening : AutoMapperSpecBase
+public class ReverseDefaultFlattening : MorphySpecBase
 {
     public class Order
     {
@@ -354,7 +354,7 @@ public class ReverseDefaultFlattening : AutoMapperSpecBase
     }
 }
 
-public class ReverseMapConventions : AutoMapperSpecBase
+public class ReverseMapConventions : MorphySpecBase
 {
     Rotator_Ad_Run _destination;
     DateTime _startDate = DateTime.Now, _endDate = DateTime.Now.AddHours(2);
@@ -409,7 +409,7 @@ public class ReverseMapConventions : AutoMapperSpecBase
     }
 }
 
-public class When_reverse_mapping_classes_with_simple_properties : AutoMapperSpecBase
+public class When_reverse_mapping_classes_with_simple_properties : MorphySpecBase
 {
     private Source _source;
 
@@ -451,7 +451,7 @@ public class When_reverse_mapping_classes_with_simple_properties : AutoMapperSpe
     }
 }
 
-public class When_validating_only_against_source_members_and_source_matches : AutoMapperSpecBase
+public class When_validating_only_against_source_members_and_source_matches : MorphySpecBase
 {
     public class Source
     {
@@ -497,11 +497,11 @@ public class When_validating_only_against_source_members_and_source_does_not_mat
     [Fact]
     public void Should_throw_a_configuration_validation_error()
     {
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
-public class When_validating_only_against_source_members_and_unmatching_source_members_are_manually_mapped : AutoMapperSpecBase
+public class When_validating_only_against_source_members_and_unmatching_source_members_are_manually_mapped : MorphySpecBase
 {
     public class Source
     {
@@ -523,7 +523,7 @@ public class When_validating_only_against_source_members_and_unmatching_source_m
     public void Validate() => AssertConfigurationIsValid();
 }
 
-public class When_validating_only_against_source_members_and_unmatching_source_members_are_manually_mapped_with_resolvers : AutoMapperSpecBase
+public class When_validating_only_against_source_members_and_unmatching_source_members_are_manually_mapped_with_resolvers : MorphySpecBase
 {
     public class Source
     {
@@ -546,7 +546,7 @@ public class When_validating_only_against_source_members_and_unmatching_source_m
     public void Validate() => AssertConfigurationIsValid();
 }
 
-public class When_reverse_mapping_and_ignoring_via_method : AutoMapperSpecBase
+public class When_reverse_mapping_and_ignoring_via_method : MorphySpecBase
 {
     public class Source
     {
@@ -616,7 +616,7 @@ public class When_reverse_mapping_and_ignoring : NonValidatingSpecBase
     }
 }
 
-public class When_reverse_mapping_open_generics : AutoMapperSpecBase
+public class When_reverse_mapping_open_generics : MorphySpecBase
 {
     private Source<int> _source;
 
@@ -651,7 +651,7 @@ public class When_reverse_mapping_open_generics : AutoMapperSpecBase
     }
 }
 
-public class When_reverse_mapping_open_generics_with_MapFrom : AutoMapperSpecBase
+public class When_reverse_mapping_open_generics_with_MapFrom : MorphySpecBase
 {
     public class Source<T>
     {
@@ -682,7 +682,7 @@ public class When_reverse_mapping_open_generics_with_MapFrom : AutoMapperSpecBas
     }
 }
 
-public class When_validating_reverse_mapping_classes_with_missing_properties : AutoMapperSpecBase
+public class When_validating_reverse_mapping_classes_with_missing_properties : MorphySpecBase
 {
     public class Source
     {
@@ -705,6 +705,6 @@ public class When_validating_reverse_mapping_classes_with_missing_properties : A
     [Fact]
     public void Should_throw_a_configuration_validation_error()
     {
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
     }
 }

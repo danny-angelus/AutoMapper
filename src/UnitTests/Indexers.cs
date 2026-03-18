@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests
+namespace Morphy.UnitTests
 {
     namespace Indexers
     {
-        public class When_mapping_to_a_destination_with_an_indexer_property : AutoMapperSpecBase
+        public class When_mapping_to_a_destination_with_an_indexer_property : MorphySpecBase
         {
             private Destination _result;
 

@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 public class CorrectCtorIsPickedOnDestinationType : NonValidatingSpecBase
 {
     public class SourceClass { }
@@ -7,7 +7,7 @@ public class CorrectCtorIsPickedOnDestinationType : NonValidatingSpecBase
     {
         public DestinationClass() { }
 
-        // Since the name of the parameter is 'type', Automapper.TypeMap chooses SourceClass.GetType()
+        // Since the name of the parameter is 'type', Morphy.TypeMap chooses SourceClass.GetType()
         // to fulfill the dependency, causing an InvalidCastException during Mapper.Map()
         public DestinationClass(Int32 type)
         {
@@ -27,7 +27,7 @@ public class CorrectCtorIsPickedOnDestinationType : NonValidatingSpecBase
         Mapper.Map<DestinationClass>(source);
     }
 }
-public class MemberNamedTypeWrong : AutoMapperSpecBase
+public class MemberNamedTypeWrong : MorphySpecBase
 {
     public class SourceClass
     {

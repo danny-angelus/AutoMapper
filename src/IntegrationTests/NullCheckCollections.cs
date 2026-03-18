@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+namespace Morphy.IntegrationTests;
 public class NullCheckCollectionsFirstOrDefault(DatabaseFixture databaseFixture) : IntegrationTest<NullCheckCollectionsFirstOrDefault.DatabaseInitializer>(databaseFixture)
 {
     public class SourceType

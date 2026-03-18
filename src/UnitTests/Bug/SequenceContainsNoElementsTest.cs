@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class SequenceContainsNoElementsTest : AutoMapperSpecBase
+public class SequenceContainsNoElementsTest : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

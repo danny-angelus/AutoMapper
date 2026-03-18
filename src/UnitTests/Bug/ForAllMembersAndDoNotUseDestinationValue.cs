@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class ForAllMembersAndResolveUsing : AutoMapperSpecBase
+public class ForAllMembersAndResolveUsing : MorphySpecBase
 {
     private Destination _destination;
 

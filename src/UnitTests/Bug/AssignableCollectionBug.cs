@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests.Bug
+namespace Morphy.UnitTests.Bug
 {
     namespace ByteArrayBug
     {
-        public class When_mapping_byte_arrays : AutoMapperSpecBase
+        public class When_mapping_byte_arrays : MorphySpecBase
         {
             private Picture _source;
             private PictureDto _dest;
@@ -41,7 +41,7 @@ namespace AutoMapper.UnitTests.Bug
 
     namespace AssignableLists
     {
-        public class AutoMapperTests
+        public class MorphyTests
         {
             [Fact]
             public void ListShouldNotMapAsReference()

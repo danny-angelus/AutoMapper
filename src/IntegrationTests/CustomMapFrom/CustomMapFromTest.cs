@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.CustomMapFrom;
+namespace Morphy.IntegrationTests.CustomMapFrom;
 
 public class CustomMapFromTest(DatabaseFixture databaseFixture) : IntegrationTest<CustomMapFromTest.DatabaseInitializer>(databaseFixture)
 {

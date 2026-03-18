@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class DeepCloningBug : AutoMapperSpecBase
+public class DeepCloningBug : MorphySpecBase
 {
     private Outer _source;
     private Outer _dest;

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class GenericTypeConverterWithTwoArguments : AutoMapperSpecBase
+public class GenericTypeConverterWithTwoArguments : MorphySpecBase
 {
     List<object> _destination;
 
@@ -28,7 +28,7 @@ public class GenericTypeConverterWithTwoArguments : AutoMapperSpecBase
     }
 }
 
-public class GenericTypeConverter : AutoMapperSpecBase
+public class GenericTypeConverter : MorphySpecBase
 {
     Destination<int> _destination;
     OtherDestination<int> _otherDestination;

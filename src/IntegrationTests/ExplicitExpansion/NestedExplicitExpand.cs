@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.ExplicitExpansion;
+namespace Morphy.IntegrationTests.ExplicitExpansion;
 
 public class NestedExplicitExpand(DatabaseFixture databaseFixture) : IntegrationTest<NestedExplicitExpand.DatabaseInitializer>(databaseFixture)
 {

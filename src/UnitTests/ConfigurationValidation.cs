@@ -1,5 +1,5 @@
-namespace AutoMapper.UnitTests.ConfigurationValidation;
-public class When_testing_a_dto_with_mismatched_member_names_and_mismatched_types : AutoMapperSpecBase
+namespace Morphy.UnitTests.ConfigurationValidation;
+public class When_testing_a_dto_with_mismatched_member_names_and_mismatched_types : MorphySpecBase
 {
     public class Source
     {
@@ -19,19 +19,19 @@ public class When_testing_a_dto_with_mismatched_member_names_and_mismatched_type
             .ShouldSatisfyAllConditions(
                 aex => aex.InnerExceptions.ShouldBeOfLength(2),
                 aex => aex.InnerExceptions[0]
-                    .ShouldBeOfType<AutoMapperConfigurationException>()
+                    .ShouldBeOfType<MorphyConfigurationException>()
                     .ShouldSatisfyAllConditions(
                         ex => ex.Errors.ShouldBeOfLength(1),
                         ex => ex.Errors[0].UnmappedPropertyNames.ShouldContain("Bar")),
                 aex => aex.InnerExceptions[1]
-                    .ShouldBeOfType<AutoMapperConfigurationException>()
+                    .ShouldBeOfType<MorphyConfigurationException>()
                     .ShouldSatisfyAllConditions(
                         ex => ex.MemberMap.ShouldNotBeNull(),
                         ex => ex.MemberMap.DestinationName.ShouldBe("Foo"))
             );
     }
 }
-public class When_testing_a_dto_with_mismatches_in_multiple_children : AutoMapperSpecBase
+public class When_testing_a_dto_with_mismatches_in_multiple_children : MorphySpecBase
 {
     public class Source
     {
@@ -52,12 +52,12 @@ public class When_testing_a_dto_with_mismatches_in_multiple_children : AutoMappe
             .ShouldSatisfyAllConditions(
                 aex => aex.InnerExceptions.ShouldBeOfLength(2),
                 aex => aex.InnerExceptions[0]
-                    .ShouldBeOfType<AutoMapperConfigurationException>()
+                    .ShouldBeOfType<MorphyConfigurationException>()
                     .ShouldSatisfyAllConditions(
                         ex => ex.MemberMap.ShouldNotBeNull(),
                         ex => ex.MemberMap.DestinationName.ShouldBe("Foo")),
                 aex => aex.InnerExceptions[1]
-                    .ShouldBeOfType<AutoMapperConfigurationException>()
+                    .ShouldBeOfType<MorphyConfigurationException>()
                     .ShouldSatisfyAllConditions(
                         ex => ex.MemberMap.ShouldNotBeNull(),
                         ex => ex.MemberMap.DestinationName.ShouldBe("Bar"))
@@ -92,11 +92,11 @@ public class ConstructorMappingValidation : NonValidatingSpecBase
     });
 
     [Fact]
-    public void Should_fail_validation() => new Action(AssertConfigurationIsValid).ShouldThrowException<AutoMapperConfigurationException>(ex=>
+    public void Should_fail_validation() => new Action(AssertConfigurationIsValid).ShouldThrowException<MorphyConfigurationException>(ex=>
         ex.MemberMap.ToString().ShouldBe("Void .ctor(ComplexType), parameter myComplexMember"));
 }
 
-public class When_using_a_type_converter : AutoMapperSpecBase
+public class When_using_a_type_converter : MorphySpecBase
 {
     public class A
     {
@@ -113,7 +113,7 @@ public class When_using_a_type_converter : AutoMapperSpecBase
     public void Validate() => AssertConfigurationIsValid();
 }
 
-public class When_using_a_type_converter_class : AutoMapperSpecBase
+public class When_using_a_type_converter_class : MorphySpecBase
 {
     public class A
     {
@@ -152,7 +152,7 @@ public class When_skipping_validation : NonValidatingSpecBase
     [Fact]
     public void Should_skip_validation()
     {
-        typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => Mapper.ConfigurationProvider.AssertConfigurationIsValid());
+        typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => Mapper.ConfigurationProvider.AssertConfigurationIsValid());
     }
 }
 
@@ -177,11 +177,11 @@ public class When_constructor_does_not_match : NonValidatingSpecBase
     [Fact]
     public void Should_throw()
     {
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
-public class When_constructor_does_not_match_ForCtorParam : AutoMapperSpecBase
+public class When_constructor_does_not_match_ForCtorParam : MorphySpecBase
 {
     public class Source
     {
@@ -223,7 +223,7 @@ public class When_constructor_partially_matches : NonValidatingSpecBase
     [Fact]
     public void Should_throw()
     {
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
@@ -253,7 +253,7 @@ public class When_constructor_partially_matches_and_ctor_param_configured : NonV
     [Fact]
     public void Should_throw()
     {
-        typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldNotBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
@@ -282,7 +282,7 @@ public class When_constructor_partially_matches_and_constructor_validation_skipp
     [Fact]
     public void Should_throw()
     {
-        typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldNotBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
@@ -343,11 +343,11 @@ public class When_testing_a_dto_with_mismatched_members : NonValidatingSpecBase
     [Fact]
     public void Should_fail_a_configuration_check()
     {
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
-public class ResolversWithSourceValidation : AutoMapperSpecBase
+public class ResolversWithSourceValidation : MorphySpecBase
 {
     class Source
     {
@@ -404,7 +404,7 @@ public class NonMemberExpressionWithSourceValidation : NonValidatingSpecBase
         .ForMember(d=>d.OtherValue, o=>o.MapFrom(s=>s.Value ?? "")));
     [Fact]
     public void Should_be_ignored() => new Action(AssertConfigurationIsValid)
-        .ShouldThrow<AutoMapperConfigurationException>().Errors[0].UnmappedPropertyNames[0].ShouldBe(nameof(Source.Value));
+        .ShouldThrow<MorphyConfigurationException>().Errors[0].UnmappedPropertyNames[0].ShouldBe(nameof(Source.Value));
 }
 
 public class MatchingNonMemberExpressionWithSourceValidation : NonValidatingSpecBase
@@ -421,10 +421,10 @@ public class MatchingNonMemberExpressionWithSourceValidation : NonValidatingSpec
         .ForMember(d => d.Value, o => o.MapFrom(s => s.Value ?? "")));
     [Fact]
     public void Should_be_ignored() => new Action(AssertConfigurationIsValid)
-        .ShouldThrow<AutoMapperConfigurationException>().Errors[0].UnmappedPropertyNames[0].ShouldBe(nameof(Source.Value));
+        .ShouldThrow<MorphyConfigurationException>().Errors[0].UnmappedPropertyNames[0].ShouldBe(nameof(Source.Value));
 }
 
-public class When_testing_a_dto_with_fully_mapped_and_custom_matchers : AutoMapperSpecBase
+public class When_testing_a_dto_with_fully_mapped_and_custom_matchers : MorphySpecBase
 {
     public class ModelObject
     {
@@ -467,13 +467,13 @@ public class When_testing_a_dto_with_matching_member_names_but_mismatched_types 
     [Fact]
     public void Should_fail_a_configuration_check()
     {
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
-public class When_testing_a_dto_with_member_type_mapped_mappings : AutoMapperSpecBase
+public class When_testing_a_dto_with_member_type_mapped_mappings : MorphySpecBase
 {
-    private AutoMapperConfigurationException _exception;
+    private MorphyConfigurationException _exception;
 
     public class Source
     {
@@ -509,7 +509,7 @@ public class When_testing_a_dto_with_member_type_mapped_mappings : AutoMapperSpe
         {
            AssertConfigurationIsValid();
         }
-        catch (AutoMapperConfigurationException ex)
+        catch (MorphyConfigurationException ex)
         {
             _exception = ex;
         }
@@ -522,9 +522,9 @@ public class When_testing_a_dto_with_member_type_mapped_mappings : AutoMapperSpe
     }
 }
 
-public class When_testing_a_dto_with_matched_members_but_mismatched_types_that_are_ignored : AutoMapperSpecBase
+public class When_testing_a_dto_with_matched_members_but_mismatched_types_that_are_ignored : MorphySpecBase
 {
-    private AutoMapperConfigurationException _exception;
+    private MorphyConfigurationException _exception;
 
     public class ModelObject
     {
@@ -550,7 +550,7 @@ public class When_testing_a_dto_with_matched_members_but_mismatched_types_that_a
         {
             AssertConfigurationIsValid();
         }
-        catch (AutoMapperConfigurationException ex)
+        catch (MorphyConfigurationException ex)
         {
             _exception = ex;
         }
@@ -593,7 +593,7 @@ public class When_testing_a_dto_with_array_types_with_mismatched_element_types :
     [Fact]
     public void Should_fail_a_configuration_check()
     {
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
@@ -627,7 +627,7 @@ public class When_testing_a_dto_with_list_types_with_mismatched_element_types : 
     [Fact]
     public void Should_fail_a_configuration_check()
     {
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
@@ -658,7 +658,7 @@ public class When_testing_a_dto_with_readonly_members : NonValidatingSpecBase
     [Fact]
     public void Should_be_valid()
     {
-        typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldNotBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
@@ -693,7 +693,7 @@ public class When_testing_a_dto_in_a_specfic_profile : NonValidatingSpecBase
 
     [Fact]
     public void Should_ignore_bad_dtos_in_other_profiles() =>
-        typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid("Good"));
+        typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid("Good"));
     [Fact]
     public void Should_throw_when_profile_name_does_not_exist() =>
         typeof(ArgumentOutOfRangeException).ShouldBeThrownBy(() => AssertConfigurationIsValid("Does not exist"));
@@ -726,7 +726,7 @@ public class When_testing_a_dto_with_mismatched_custom_member_mapping : NonValid
     [Fact]
     public void Should_fail_a_configuration_check()
     {
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
@@ -748,7 +748,7 @@ public class When_testing_a_dto_with_value_specified_members : NonValidatingSpec
     [Fact]
     public void Should_validate_successfully()
     {
-        typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldNotBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
@@ -772,7 +772,7 @@ public class When_testing_a_dto_with_setter_only_peroperty_member : NonValidatin
     [Fact]
     public void Should_fail_a_configuration_check()
     {
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
@@ -798,7 +798,7 @@ public class When_testing_a_dto_with_matching_void_method_member : NonValidating
     [Fact]
     public void Should_fail_a_configuration_check()
     {
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(AssertConfigurationIsValid);
     }
 }
 
@@ -814,7 +814,7 @@ public class When_redirecting_types : NonValidatingSpecBase
     [Fact]
     public void Should_pass_configuration_check()
     {
-        typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(AssertConfigurationIsValid);
+        typeof(MorphyConfigurationException).ShouldNotBeThrownBy(AssertConfigurationIsValid);
     }
 
     class ConcreteSource
@@ -833,7 +833,7 @@ public class When_redirecting_types : NonValidatingSpecBase
     }
 }
 
-public class When_configuring_a_resolver : AutoMapperSpecBase
+public class When_configuring_a_resolver : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {
@@ -860,7 +860,7 @@ public class When_configuring_a_resolver : AutoMapperSpecBase
     [Fact]
     public void Validate() => AssertConfigurationIsValid();
 }
-public class ObjectPropertyAndNestedTypes : AutoMapperSpecBase
+public class ObjectPropertyAndNestedTypes : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg => cfg.CreateMap<RootLevel, RootLevelDto>());
     public class RootLevel
@@ -880,5 +880,5 @@ public class ObjectPropertyAndNestedTypes : AutoMapperSpecBase
     {
     }
     [Fact]
-    public void Should_fail_validation() => new Action(AssertConfigurationIsValid).ShouldThrow<AutoMapperConfigurationException>().MemberMap.DestinationName.ShouldBe(nameof(RootLevelDto.SecondLevel));
+    public void Should_fail_validation() => new Action(AssertConfigurationIsValid).ShouldThrow<MorphyConfigurationException>().MemberMap.DestinationName.ShouldBe(nameof(RootLevelDto.SecondLevel));
 }

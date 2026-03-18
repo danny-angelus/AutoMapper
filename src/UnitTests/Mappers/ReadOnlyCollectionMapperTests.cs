@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Mappers
+namespace Morphy.UnitTests.Mappers
 {
     namespace ReadOnlyCollections
     {
-        public class When_mapping_to_interface_readonly_collection : AutoMapperSpecBase
+        public class When_mapping_to_interface_readonly_collection : MorphySpecBase
         {
             public class Source
             {
@@ -39,7 +39,7 @@
             }
         }
 
-        public class When_mapping_to_concrete_readonly_collection : AutoMapperSpecBase
+        public class When_mapping_to_concrete_readonly_collection : MorphySpecBase
         {
             public class Source
             {
@@ -76,7 +76,7 @@
             }
         }
 
-        public class When_mapping_to_interface_readonly_list : AutoMapperSpecBase
+        public class When_mapping_to_interface_readonly_list : MorphySpecBase
         {
             public class Source
             {

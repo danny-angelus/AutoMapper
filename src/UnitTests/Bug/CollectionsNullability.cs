@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class CollectionsNullability : AutoMapperSpecBase
+public class CollectionsNullability : MorphySpecBase
 {
     Holder _destination;
 

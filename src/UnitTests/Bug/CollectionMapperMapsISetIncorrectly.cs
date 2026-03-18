@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
 public class CollectionMapperMapsIEnumerableToISetIncorrectly
 {

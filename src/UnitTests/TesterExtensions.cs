@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
 public static class StopgapNBehaveExtensions
 {

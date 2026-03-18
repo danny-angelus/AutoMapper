@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests.Bug
+namespace Morphy.UnitTests.Bug
 {
     namespace InterfaceMultipleInheritance
     {
-        public class InterfaceMultipleInheritanceBug1036 : AutoMapperSpecBase
+        public class InterfaceMultipleInheritanceBug1036 : MorphySpecBase
         {
             private MapTo _destination;
 
@@ -100,7 +100,7 @@ namespace AutoMapper.UnitTests.Bug
             }
         }
 
-        public class InterfaceMultipleInheritanceBug1016 : AutoMapperSpecBase
+        public class InterfaceMultipleInheritanceBug1016 : MorphySpecBase
         {
             private class4DTO _destination;
 

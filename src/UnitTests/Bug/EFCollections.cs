@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class EFCollections : AutoMapperSpecBase
+public class EFCollections : MorphySpecBase
 {
     private Dest _dest;
 

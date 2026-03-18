@@ -1,6 +1,6 @@
-﻿using StringDictionary = System.Collections.Generic.Dictionary<string, object>;
+using StringDictionary = System.Collections.Generic.Dictionary<string, object>;
 
-namespace AutoMapper.UnitTests.Mappers;
+namespace Morphy.UnitTests.Mappers;
 
 class Destination
 {
@@ -180,10 +180,10 @@ public class When_mapping_from_StringDictionary_multiple_matching_keys : NonVali
     [Fact]
     public void Should_throw_when_mapping()
     {
-        Should.Throw<AutoMapperMappingException>(() =>
+        Should.Throw<MorphyMappingException>(() =>
         {
             Mapper.Map<Destination>(_source);
-        }).InnerException.ShouldBeOfType<AutoMapperMappingException>().Types.ShouldBe(new TypePair(typeof(IDictionary<string, object>), typeof(Destination)));
+        }).InnerException.ShouldBeOfType<MorphyMappingException>().Types.ShouldBe(new TypePair(typeof(IDictionary<string, object>), typeof(Destination)));
     }
 }
 
@@ -208,7 +208,7 @@ public class When_mapping_from_StringDictionary_to_StringDictionary : NonValidat
     }
 }
 
-public class When_mapping_from_StringDictionary_to_existing_destination : AutoMapperSpecBase
+public class When_mapping_from_StringDictionary_to_existing_destination : MorphySpecBase
 {
     public abstract class SomeBase
     {
@@ -286,7 +286,7 @@ public class When_mapping_from_StringDictionary_to_existing_destination : AutoMa
     }
 }
 
-public class When_mapping_from_StringDictionary_to_abstract_type : AutoMapperSpecBase
+public class When_mapping_from_StringDictionary_to_abstract_type : MorphySpecBase
 {
     public abstract class SomeBase
     {
@@ -320,7 +320,7 @@ public class When_mapping_from_StringDictionary_to_abstract_type : AutoMapperSpe
     public void Should_throw()
     {
         new Action(() => Mapper.Map<SomeBase>(new StringDictionary()))
-            .ShouldThrowException<AutoMapperMappingException>(ex =>
+            .ShouldThrowException<MorphyMappingException>(ex =>
                 ex.InnerException.Message.ShouldStartWith($"Cannot create an instance of abstract type {typeof(SomeBase)}."));
     }
 }

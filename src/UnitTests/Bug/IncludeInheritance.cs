@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class IncludeInheritance : AutoMapperSpecBase
+public class IncludeInheritance : MorphySpecBase
 {
     DestinationLevel2 _destination;
 

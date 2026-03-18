@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class ByrefConstructorParameter : AutoMapperSpecBase
+public class ByrefConstructorParameter : MorphySpecBase
 {
     private Destination _destination;
 

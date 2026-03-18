@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
-public class ReverseMapAs : AutoMapperSpecBase
+namespace Morphy.UnitTests.MappingInheritance;
+public class ReverseMapAs : MorphySpecBase
 {
     public interface IModel
     {
@@ -21,7 +21,7 @@ public class ReverseMapAs : AutoMapperSpecBase
     [Fact]
     public void Should_work() => Map<IModel>(new Dto { First = 1}).First.ShouldBe(1);
 }
-public class MapToBaseClass : AutoMapperSpecBase
+public class MapToBaseClass : MorphySpecBase
 {
     A _destination;
 
@@ -46,7 +46,7 @@ public class MapToBaseClass : AutoMapperSpecBase
         _destination.ShouldBeOfType<A>();
     }
 }
-public class OverrideInclude : AutoMapperSpecBase
+public class OverrideInclude : MorphySpecBase
 {
     class Source
     {
@@ -69,7 +69,7 @@ public class OverrideInclude : AutoMapperSpecBase
     [Fact]
     public void ExplicitMapShouldApply() => Map<Destination>(new SourceDerived()).ShouldBeOfType<Destination>();
 }
-public class IncludeAs : AutoMapperSpecBase
+public class IncludeAs : MorphySpecBase
 {
     class Source
     {

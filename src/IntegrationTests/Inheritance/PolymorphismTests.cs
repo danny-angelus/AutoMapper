@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.Inheritance;
+namespace Morphy.IntegrationTests.Inheritance;
 
 public class PolymorphismTests(DatabaseFixture databaseFixture) : IntegrationTest<PolymorphismTests.DatabaseInitializer>(databaseFixture)
 {

@@ -1,5 +1,5 @@
-namespace AutoMapper.UnitTests.CustomMapping;
-public class StringToEnumConverter : AutoMapperSpecBase
+namespace Morphy.UnitTests.CustomMapping;
+public class StringToEnumConverter : MorphySpecBase
 {
     class Source
     {
@@ -21,7 +21,7 @@ public class StringToEnumConverter : AutoMapperSpecBase
         Map<Destination>(new Source()).Enum.ShouldBe(ConsoleColor.DarkCyan);
     }
 }
-public class NullableConverter : AutoMapperSpecBase
+public class NullableConverter : MorphySpecBase
 {
     public enum GreekLetters
     {
@@ -43,7 +43,7 @@ public class NullableConverter : AutoMapperSpecBase
     }
 }
 
-public class MissingConverter : AutoMapperSpecBase
+public class MissingConverter : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(c =>
     {
@@ -55,11 +55,11 @@ public class MissingConverter : AutoMapperSpecBase
     public void Should_report_the_missing_converter()
     {
         new Action(()=>Mapper.Map<int, int>(0))
-            .ShouldThrowException<AutoMapperMappingException>(e=>e.Message.ShouldBe("Cannot create an instance of type AutoMapper.ITypeConverter`2[System.Int32,System.Int32]"));
+            .ShouldThrowException<MorphyMappingException>(e=>e.Message.ShouldBe("Cannot create an instance of type Morphy.ITypeConverter`2[System.Int32,System.Int32]"));
     }
 }
 
-public class DecimalAndNullableDecimal : AutoMapperSpecBase
+public class DecimalAndNullableDecimal : MorphySpecBase
 {
     Destination _destination;
 
@@ -99,7 +99,7 @@ public class DecimalAndNullableDecimal : AutoMapperSpecBase
     }
 }
 
-public class When_converting_to_string : AutoMapperSpecBase
+public class When_converting_to_string : MorphySpecBase
 {
     Destination _destination;
 
@@ -148,7 +148,7 @@ public class When_converting_to_string : AutoMapperSpecBase
     }
 }
 
-public class When_specifying_type_converters_for_object_mapper_types : AutoMapperSpecBase
+public class When_specifying_type_converters_for_object_mapper_types : MorphySpecBase
 {
     class Source
     {
@@ -178,7 +178,7 @@ public class When_specifying_type_converters_for_object_mapper_types : AutoMappe
     }
 }
 
-public class When_specifying_type_converters : AutoMapperSpecBase
+public class When_specifying_type_converters : MorphySpecBase
 {
     private Destination _result;
 
@@ -228,7 +228,7 @@ public class When_specifying_type_converters : AutoMapperSpecBase
         {
             Value1 = "5",
             Value2 = "01/01/2000",
-            Value3 = "AutoMapper.UnitTests.CustomMapping.When_specifying_type_converters+Destination"
+            Value3 = "Morphy.UnitTests.CustomMapping.When_specifying_type_converters+Destination"
         };
 
         _result = Mapper.Map<Source, Destination>(source);
@@ -253,7 +253,7 @@ public class When_specifying_type_converters : AutoMapperSpecBase
     }
 }
 
-public class When_specifying_type_converters_on_types_with_incompatible_members : AutoMapperSpecBase
+public class When_specifying_type_converters_on_types_with_incompatible_members : MorphySpecBase
 {
     private ParentDestination _result;
 
@@ -342,7 +342,7 @@ public class When_specifying_a_type_converter_for_a_non_generic_configuration : 
     }
 }
 
-public class When_specifying_a_non_generic_type_converter_for_a_non_generic_configuration : AutoMapperSpecBase
+public class When_specifying_a_non_generic_type_converter_for_a_non_generic_configuration : MorphySpecBase
 {
     private Destination _result;
 

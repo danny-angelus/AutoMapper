@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
 public class RemovePrefixes : NonValidatingSpecBase
 {
@@ -20,6 +20,6 @@ public class RemovePrefixes : NonValidatingSpecBase
     [Fact]
     public void Should_not_map_with_default_postfix()
     {
-        new Action(AssertConfigurationIsValid).ShouldThrow<AutoMapperConfigurationException>();
+        new Action(AssertConfigurationIsValid).ShouldThrow<MorphyConfigurationException>();
     }
 }

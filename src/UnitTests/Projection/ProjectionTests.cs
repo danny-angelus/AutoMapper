@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+namespace Morphy.UnitTests.Projection;
 
-public class NonNullableToNullable : AutoMapperSpecBase
+public class NonNullableToNullable : MorphySpecBase
 {
     class Source
     {
@@ -38,7 +38,7 @@ public class ProjectionAndMappingCombined : NonValidatingSpecBase
         var mappingConfiguration = new MapperConfiguration(cfg => cfg.CreateProjection<Source, Destination>());
         var mapper = mappingConfiguration.CreateMapper();
         
-        typeof(AutoMapperConfigurationException).ShouldBeThrownBy(() =>
+        typeof(MorphyConfigurationException).ShouldBeThrownBy(() =>
             mapper.Map<Destination[]>(new[] { new Source() }.AsQueryable()));
     }
     
@@ -53,13 +53,13 @@ public class ProjectionAndMappingCombined : NonValidatingSpecBase
         
         var mapper = mappingConfiguration.CreateMapper();
         
-        typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() =>
+        typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() =>
             mapper.Map<Destination[]>(new[] { new Source() }.AsQueryable()));
         new[] { new Source() }.AsQueryable().ProjectTo<Destination>(mappingConfiguration).First().Id.ShouldBe(0);
         mapper.Map<Destination[]>(new[] { new Source() }.AsQueryable()).First().Id.ShouldBe(0);
     }
 }
-public class InMemoryMapObjectPropertyFromSubQuery : AutoMapperSpecBase
+public class InMemoryMapObjectPropertyFromSubQuery : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
 public class DeepNestingStackOverflow
 {
@@ -6,7 +6,7 @@ public class DeepNestingStackOverflow
 
     // Verifies that mapping a deeply nested self-referential object does not
     // crash the process with a StackOverflowException (GHSA-rvv3-g6hj-g44x).
-    // AutoMapper auto-applies a default MaxDepth of 64 (matching System.Text.Json
+    // Morphy auto-applies a default MaxDepth of 64 (matching System.Text.Json
     // and Newtonsoft.Json) when it detects a self-referential type mapping.
     [Fact]
     public void Mapping_deeply_nested_self_referential_object_should_not_stackoverflow()

@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+namespace Morphy.IntegrationTests;
 
 public class CustomProjectionStringToString(DatabaseFixture databaseFixture) : IntegrationTest<CustomProjectionStringToString.DatabaseInitializer>(databaseFixture)
 {

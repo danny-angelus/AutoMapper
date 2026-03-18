@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.BuiltInTypes;
+namespace Morphy.IntegrationTests.BuiltInTypes;
 
 public class ConvertUsingWithNullables(DatabaseFixture databaseFixture) : IntegrationTest<ConvertUsingWithNullables.DatabaseInitializer>(databaseFixture)
 {

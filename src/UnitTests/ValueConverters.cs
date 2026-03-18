@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
 public class ValueConverters
 {
-    public class When_specifying_value_converter_for_matching_member : AutoMapperSpecBase
+    public class When_specifying_value_converter_for_matching_member : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {
@@ -60,7 +60,7 @@ public class ValueConverters
         }
     }
 
-    public class When_specifying_value_converter_for_non_matching_member : AutoMapperSpecBase
+    public class When_specifying_value_converter_for_non_matching_member : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {
@@ -117,7 +117,7 @@ public class ValueConverters
             dest.ValueFoo4.ShouldBe("0004");
         }
     }
-    public class When_specifying_value_converter_with_no_source : AutoMapperSpecBase
+    public class When_specifying_value_converter_with_no_source : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {
@@ -133,11 +133,11 @@ public class ValueConverters
         protected override MapperConfiguration CreateConfiguration() => new(cfg => cfg.CreateMap<Source, Dest>()
                 .ForMember(d => d.ValueFoo1, opt => opt.ConvertUsing<EightDigitIntToStringConverter, int>()));
         [Fact]
-        public void Should_report_error() => new Action(()=>Map<Dest>(new Source())).ShouldThrow<AutoMapperMappingException>().InnerException.Message.ShouldBe(
-            "Cannot find a source member to pass to the value converter of type AutoMapper.UnitTests.ValueConverters+When_specifying_value_converter_with_no_source+EightDigitIntToStringConverter. Configure a source member to map from.");
+        public void Should_report_error() => new Action(()=>Map<Dest>(new Source())).ShouldThrow<MorphyMappingException>().InnerException.Message.ShouldBe(
+            "Cannot find a source member to pass to the value converter of type Morphy.UnitTests.ValueConverters+When_specifying_value_converter_with_no_source+EightDigitIntToStringConverter. Configure a source member to map from.");
     }
 
-    public class When_specifying_value_converter_for_string_based_matching_member : AutoMapperSpecBase
+    public class When_specifying_value_converter_for_string_based_matching_member : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {
@@ -195,7 +195,7 @@ public class ValueConverters
         }
     }
 
-    public class When_specifying_value_converter_for_string_based_non_matching_member : AutoMapperSpecBase
+    public class When_specifying_value_converter_for_string_based_non_matching_member : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {
@@ -253,7 +253,7 @@ public class ValueConverters
         }
     }
 
-    public class When_specifying_value_converter_for_type_and_string_based_matching_member : AutoMapperSpecBase
+    public class When_specifying_value_converter_for_type_and_string_based_matching_member : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {
@@ -311,7 +311,7 @@ public class ValueConverters
         }
     }
 
-    public class When_specifying_value_converter_for_type_and_string_based_non_matching_member : AutoMapperSpecBase
+    public class When_specifying_value_converter_for_type_and_string_based_non_matching_member : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {
@@ -369,7 +369,7 @@ public class ValueConverters
         }
     }
 
-    public class When_specifying_value_converter_instance_for_matching_member : AutoMapperSpecBase
+    public class When_specifying_value_converter_instance_for_matching_member : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {
@@ -427,7 +427,7 @@ public class ValueConverters
         }
     }
 
-    public class When_specifying_value_converter_instance_for_non_matching_member : AutoMapperSpecBase
+    public class When_specifying_value_converter_instance_for_non_matching_member : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {
@@ -485,7 +485,7 @@ public class ValueConverters
         }
     }
 
-    public class When_specifying_value_converter_instance_for_string_based_matching_member : AutoMapperSpecBase
+    public class When_specifying_value_converter_instance_for_string_based_matching_member : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {
@@ -543,7 +543,7 @@ public class ValueConverters
         }
     }
 
-    public class When_specifying_value_converter_instance_for_string_based_non_matching_member : AutoMapperSpecBase
+    public class When_specifying_value_converter_instance_for_string_based_non_matching_member : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {
@@ -601,7 +601,7 @@ public class ValueConverters
         }
     }
 
-    public class When_specifying_value_converter_for_all_members : AutoMapperSpecBase
+    public class When_specifying_value_converter_for_all_members : MorphySpecBase
     {
         public class EightDigitIntToStringConverter : IValueConverter<int, string>
         {

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class ReadOnlyFieldMappingBug : AutoMapperSpecBase
+public class ReadOnlyFieldMappingBug : MorphySpecBase
 {
     public class Source
     {

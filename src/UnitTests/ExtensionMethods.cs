@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
 interface IGeneric<T> { }
 public class When_an_extension_methods_contraints_fail : NonValidatingSpecBase
@@ -16,10 +16,10 @@ public class When_an_extension_methods_contraints_fail : NonValidatingSpecBase
         c.CreateMap<Source, Destination>();
     });
     [Fact]
-    public void It_should_fail_validation() => new Action(AssertConfigurationIsValid).ShouldThrow<AutoMapperConfigurationException>()
+    public void It_should_fail_validation() => new Action(AssertConfigurationIsValid).ShouldThrow<MorphyConfigurationException>()
         .Errors[0].UnmappedPropertyNames[0].ShouldBe(nameof(Destination.Count));
 }
-public class When_an_extension_method_is_for_a_base_interface : AutoMapperSpecBase
+public class When_an_extension_method_is_for_a_base_interface : MorphySpecBase
 {
     class Source : IGeneric<int>
     {
@@ -41,7 +41,7 @@ public static class GenericExtensions
     private static int GetValue(this IGeneric<int> _) => 12;
     private static int Count<T>(this IGeneric<T> _) where T : IDisposable => 12;
 }
-public class When_an_extension_method_is_for_a_base_class : AutoMapperSpecBase
+public class When_an_extension_method_is_for_a_base_class : MorphySpecBase
 {
     class Source
     {
@@ -69,7 +69,7 @@ public static class BarExtensions
     }
 }
 
-public class When_null_is_passed_to_an_extension_method : AutoMapperSpecBase
+public class When_null_is_passed_to_an_extension_method : MorphySpecBase
 {
     public class Foo
     {
@@ -105,7 +105,7 @@ public static class When_extension_method_returns_value_type_SourceExtensions
     public static string GetValue2(this When_extension_method_returns_value_type.Source source) { return "hello from extension"; }
 }
 
-public class When_extension_method_returns_value_type : AutoMapperSpecBase
+public class When_extension_method_returns_value_type : MorphySpecBase
 {
     private Destination _destination;
 
@@ -152,7 +152,7 @@ public static class When_extension_method_returns_object_SourceExtensions
     }
 }
 
-public class When_extension_method_returns_object : AutoMapperSpecBase
+public class When_extension_method_returns_object : MorphySpecBase
 {
     private Destination _destination;
 
@@ -196,7 +196,7 @@ public class When_extension_method_returns_object : AutoMapperSpecBase
     }
 }
 
-public class When_extension_contains_LINQ_methods : AutoMapperSpecBase
+public class When_extension_contains_LINQ_methods : MorphySpecBase
 {
     private Destination _destination;
 
@@ -251,13 +251,13 @@ public class When_disabling_method_maping : NonValidatingSpecBase
     [Fact]
     public void Should_fail_validation()
     {
-        new Action(AssertConfigurationIsValid).ShouldThrow<AutoMapperConfigurationException>().Errors[0]
+        new Action(AssertConfigurationIsValid).ShouldThrow<MorphyConfigurationException>().Errors[0]
             .UnmappedPropertyNames.ShouldBe(new[] { "ValuesCount", "OtherValue" });
         Mapper.Map<Destination>(new Source { StringValue = "42" }).StringValue.ShouldBeNull();
     }
 }
 
-public class When_a_static_method_has_first_parameter_null : AutoMapperSpecBase
+public class When_a_static_method_has_first_parameter_null : MorphySpecBase
 {
     class FirstName
     {

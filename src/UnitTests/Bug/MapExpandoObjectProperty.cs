@@ -1,8 +1,8 @@
 using System.Dynamic;
 
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class MapExpandoObjectProperty : AutoMapperSpecBase
+public class MapExpandoObjectProperty : MorphySpecBase
 {
 
     class From

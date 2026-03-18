@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
 public class ShouldUseConstructorInternal : NonValidatingSpecBase
 {
@@ -35,7 +35,7 @@ public class ShouldUseConstructorInternal : NonValidatingSpecBase
         });
 
     [Fact]
-    public void Should_only_map_internal_ctor() => Should.Throw<AutoMapperConfigurationException>(AssertConfigurationIsValid);
+    public void Should_only_map_internal_ctor() => Should.Throw<MorphyConfigurationException>(AssertConfigurationIsValid);
 }
 
 public class ShouldUseConstructorPrivate : NonValidatingSpecBase
@@ -74,7 +74,7 @@ public class ShouldUseConstructorPrivate : NonValidatingSpecBase
         });
 
     [Fact]
-    public void Should_only_map_private_ctor() => Should.Throw<AutoMapperConfigurationException>(AssertConfigurationIsValid);
+    public void Should_only_map_private_ctor() => Should.Throw<MorphyConfigurationException>(AssertConfigurationIsValid);
 }
 
 public class ShouldUseConstructorPublic : NonValidatingSpecBase
@@ -114,11 +114,11 @@ public class ShouldUseConstructorPublic : NonValidatingSpecBase
     [Fact]
     public void Should_only_map_public_ctor()
     {
-        Should.Throw<AutoMapperConfigurationException>(AssertConfigurationIsValid);
+        Should.Throw<MorphyConfigurationException>(AssertConfigurationIsValid);
     }
 }
 
-public class ShouldUseConstructorDefault : AutoMapperSpecBase
+public class ShouldUseConstructorDefault : MorphySpecBase
 {
     class Destination
     {
@@ -173,7 +173,7 @@ public class ShouldIgnoreExplicitStaticConstructor : NonValidatingSpecBase
     [Fact]
     public void Should_ignore_static_constructor()
     {
-        Should.Throw<AutoMapperConfigurationException>(AssertConfigurationIsValid);
+        Should.Throw<MorphyConfigurationException>(AssertConfigurationIsValid);
     }
 }
 
@@ -200,5 +200,5 @@ public class ShouldIgnoreImplicitStaticConstructor : NonValidatingSpecBase
 
     [Fact]
     public void Should_ignore_implicit_static_constructor() =>
-        Should.Throw<AutoMapperConfigurationException>(AssertConfigurationIsValid);
+        Should.Throw<MorphyConfigurationException>(AssertConfigurationIsValid);
 }

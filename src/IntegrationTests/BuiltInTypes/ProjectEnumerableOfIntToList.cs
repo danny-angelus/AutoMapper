@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.BuiltInTypes;
+namespace Morphy.IntegrationTests.BuiltInTypes;
 
 public class ProjectEnumerableOfIntToList(DatabaseFixture databaseFixture) : IntegrationTest<ProjectEnumerableOfIntToList.DatabaseInitializer>(databaseFixture)
 {

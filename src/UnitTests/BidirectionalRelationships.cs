@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.BidirectionalRelationships;
+namespace Morphy.UnitTests.BidirectionalRelationships;
 
-public class RecursiveMappingWithStruct : AutoMapperSpecBase
+public class RecursiveMappingWithStruct : MorphySpecBase
 {
     private ParentDto _dto;
 
@@ -70,7 +70,7 @@ public class RecursiveMappingWithStruct : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_many_child_relationship : AutoMapperSpecBase
+public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_many_child_relationship : MorphySpecBase
 {
     private ParentDto _dto;
 
@@ -135,7 +135,7 @@ public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_ma
     }
 }
 
-public class RecursiveDynamicMapping : AutoMapperSpecBase
+public class RecursiveDynamicMapping : MorphySpecBase
 {
     private ParentDto<int> _dto;
 
@@ -200,7 +200,7 @@ public class RecursiveDynamicMapping : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_many_child_relationship_using_CustomMapper_with_context : AutoMapperSpecBase
+public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_many_child_relationship_using_CustomMapper_with_context : MorphySpecBase
 {
     private ParentDto _dto;
     private static ParentModel _parent;
@@ -299,7 +299,7 @@ public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_ma
     }
 }
 
-public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_one_child_relationship : AutoMapperSpecBase
+public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_one_child_relationship : MorphySpecBase
 {
     private FooDto _dto;
 
@@ -351,7 +351,7 @@ public class When_mapping_to_a_destination_with_a_bidirectional_parent_one_to_on
     }
 }
 
-public class When_mapping_to_a_destination_containing_two_dtos_mapped_from_the_same_source : AutoMapperSpecBase
+public class When_mapping_to_a_destination_containing_two_dtos_mapped_from_the_same_source : MorphySpecBase
 {
     private FooContainerModel _dto;
 
@@ -403,7 +403,7 @@ public class When_mapping_to_a_destination_containing_two_dtos_mapped_from_the_s
     }
 }
 
-public class When_mapping_with_a_bidirectional_relationship_that_includes_arrays : AutoMapperSpecBase
+public class When_mapping_with_a_bidirectional_relationship_that_includes_arrays : MorphySpecBase
 
 {
     private ParentDto _dtoParent;

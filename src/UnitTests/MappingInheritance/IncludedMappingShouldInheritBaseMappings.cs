@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests;
-public class IncludeBaseIndirectBase : AutoMapperSpecBase
+namespace Morphy.UnitTests;
+public class IncludeBaseIndirectBase : MorphySpecBase
 {
     public class FooBaseBase
     {
@@ -29,7 +29,7 @@ public class IncludeBaseIndirectBase : AutoMapperSpecBase
     [Fact]
     public void Should_work() => Map<FooDto>(new Foo()).Date.ShouldBe(DateTime.MaxValue);
 }
-public class ReadonlyCollectionPropertiesOverride : AutoMapperSpecBase
+public class ReadonlyCollectionPropertiesOverride : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {
@@ -55,7 +55,7 @@ public class ReadonlyCollectionPropertiesOverride : AutoMapperSpecBase
     [Fact]
     public void ShouldMapOk() => Mapper.Map<Destination>(new Source { CodeList = { "DMItemCode1" } }).CodeList.ShouldNotBeOfType<HashSet<string>>();
 }
-public class ReadonlyCollectionProperties : AutoMapperSpecBase
+public class ReadonlyCollectionProperties : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg=>
     {
@@ -293,7 +293,7 @@ public class IncludedBaseMappingShouldInheritBaseMappings : NonValidatingSpecBas
     }
 
     [Fact]
-    public void include_should_allow_automapper_to_select_more_specific_included_type_with_one_parameter()
+    public void include_should_allow_Morphy_to_select_more_specific_included_type_with_one_parameter()
     {
         var config = new MapperConfiguration(cfg =>
         {
@@ -315,7 +315,7 @@ public class IncludedBaseMappingShouldInheritBaseMappings : NonValidatingSpecBas
     }
     
     [Fact]
-    public void include_should_allow_automapper_to_select_more_specific_included_type()
+    public void include_should_allow_Morphy_to_select_more_specific_included_type()
     {
         var config = new MapperConfiguration(cfg =>
         {

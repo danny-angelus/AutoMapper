@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class TargetISet : AutoMapperSpecBase
+public class TargetISet : MorphySpecBase
 {
     Destination _destination;
     string[] _items = new[] { "one", "two", "three" };

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class GuidTryExpression : AutoMapperSpecBase
+public class GuidTryExpression : MorphySpecBase
 {
     private Destination _destination;
     private Guid _value = Guid.NewGuid();

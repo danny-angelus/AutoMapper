@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+namespace Morphy.IntegrationTests;
 public class ConstructorDefaultValue(DatabaseFixture databaseFixture) : IntegrationTest<ConstructorDefaultValue.DatabaseInitializer>(databaseFixture)
 {
     public class Customer

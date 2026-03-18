@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+namespace Morphy.UnitTests.Projection;
 
 public class MoreExplanatoryExceptionTests
 {
@@ -10,7 +10,7 @@ public class MoreExplanatoryExceptionTests
             cfg.CreateProjection<EntitySource, EntityDestination>());
 
         // Act
-        var exception = Assert.Throws<AutoMapperMappingException>(() =>
+        var exception = Assert.Throws<MorphyMappingException>(() =>
             new EntitySource[0].AsQueryable().ProjectTo<EntityDestination>(config));
 
         // Assert

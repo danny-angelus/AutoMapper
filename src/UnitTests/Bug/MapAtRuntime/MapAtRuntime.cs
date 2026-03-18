@@ -1,9 +1,9 @@
-﻿using OmmitedDatabaseModel3;
+using OmmitedDatabaseModel3;
 using OmmitedDTOModel3;
 
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class MapAtRuntime : AutoMapperSpecBase
+public class MapAtRuntime : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

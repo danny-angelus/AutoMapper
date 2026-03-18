@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Bug
+namespace Morphy.UnitTests.Bug
 {
     namespace NullableConverterBug
     {
-        namespace AutoMapperIssue
+        namespace MorphyIssue
         {
             public class TestProblem
             {

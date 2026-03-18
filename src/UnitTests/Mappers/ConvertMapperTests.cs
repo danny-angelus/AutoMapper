@@ -1,8 +1,8 @@
-﻿using AutoMapper.Internal.Mappers;
+using Morphy.Internal.Mappers;
 
-namespace AutoMapper.UnitTests.Mappers;
+namespace Morphy.UnitTests.Mappers;
 
-public class ConvertMapperTests : AutoMapperSpecBase
+public class ConvertMapperTests : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(c => { });
 

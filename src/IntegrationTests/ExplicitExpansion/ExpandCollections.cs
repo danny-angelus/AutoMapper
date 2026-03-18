@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.ExplicitExpansion;
+namespace Morphy.IntegrationTests.ExplicitExpansion;
 
 public class ExpandCollections(DatabaseFixture databaseFixture) : IntegrationTest<ExpandCollections.DatabaseInitializer>(databaseFixture)
 {

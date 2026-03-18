@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class SubclassMappings : AutoMapperSpecBase
+public class SubclassMappings : MorphySpecBase
 {
     public class Source
     {

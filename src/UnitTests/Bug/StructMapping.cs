@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class StructMapping : AutoMapperSpecBase
+public class StructMapping : MorphySpecBase
 {
     private Destination _destination;
 
@@ -33,7 +33,7 @@ public class StructMapping : AutoMapperSpecBase
         _destination.Number.ShouldBe(23);
     }
 }
-public class DestinationStructMapping : AutoMapperSpecBase
+public class DestinationStructMapping : MorphySpecBase
 {
     struct Source
     {

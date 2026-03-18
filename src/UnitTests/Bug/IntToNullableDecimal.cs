@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class IntToNullableDecimal : AutoMapperSpecBase
+public class IntToNullableDecimal : MorphySpecBase
 {
     private Destination _destination;
 

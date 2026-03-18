@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.MaxDepth;
+namespace Morphy.IntegrationTests.MaxDepth;
 
 public class MaxDepthWithCollections(DatabaseFixture databaseFixture) : IntegrationTest<MaxDepthWithCollections.DatabaseInitializer>(databaseFixture)
 {

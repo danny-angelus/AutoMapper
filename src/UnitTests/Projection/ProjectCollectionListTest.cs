@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+namespace Morphy.UnitTests.Projection;
 public class ProjectCollectionListTest
 {
     private MapperConfiguration _config;
@@ -87,7 +87,7 @@ public class ProjectCollectionListTest
         }
     }
 }
-public class MapProjection : AutoMapperSpecBase
+public class MapProjection : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {
@@ -95,7 +95,7 @@ public class MapProjection : AutoMapperSpecBase
         cfg.CreateMap<Customer, CustomerDto>();
     });
     [Fact]
-    public void ShouldNotMap() => new Action(() => Map<CustomerDto>(new Customer())).ShouldThrow<AutoMapperConfigurationException>().Message.ShouldBe("CreateProjection works with ProjectTo, not with Map.");
+    public void ShouldNotMap() => new Action(() => Map<CustomerDto>(new Customer())).ShouldThrow<MorphyConfigurationException>().Message.ShouldBe("CreateProjection works with ProjectTo, not with Map.");
     public class Customer
     {
         public IList<Address> Addresses { get; set; }

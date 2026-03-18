@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class AddProfiles : AutoMapperSpecBase
+public class AddProfiles : MorphySpecBase
 {
     public class Source { }
     public class Dest { }

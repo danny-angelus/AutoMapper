@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class When_a_source_child_object_is_null : AutoMapperSpecBase
+public class When_a_source_child_object_is_null : MorphySpecBase
 {
     public class Source
     {
@@ -31,7 +31,7 @@ public class When_a_source_child_object_is_null : AutoMapperSpecBase
     }
 }
 
-public class When_the_destination_object_is_specified : AutoMapperSpecBase
+public class When_the_destination_object_is_specified : MorphySpecBase
 {
     private Source _source;
     private Destination _originalDest;
@@ -76,7 +76,7 @@ public class When_the_destination_object_is_specified : AutoMapperSpecBase
     }
 }
    
-public class When_the_destination_object_is_specified_with_child_objects : AutoMapperSpecBase
+public class When_the_destination_object_is_specified_with_child_objects : MorphySpecBase
 {
     private Source _source;
     private Destination _originalDest;
@@ -151,7 +151,7 @@ public class When_the_destination_object_is_specified_with_child_objects : AutoM
     }
 }
 
-public class When_the_destination_object_has_child_objects : AutoMapperSpecBase
+public class When_the_destination_object_has_child_objects : MorphySpecBase
 {
     private Source _source;
     private Destination _originalDest;

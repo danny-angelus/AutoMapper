@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class CollectionWhere : AutoMapperSpecBase
+public class CollectionWhere : MorphySpecBase
 {
     private Destination _destination;
     private List<int> _sourceList = new List<int>() { 1, 2, 3 };

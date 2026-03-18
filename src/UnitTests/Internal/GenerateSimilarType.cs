@@ -1,6 +1,6 @@
-﻿using AutoMapper.Execution;
+using Morphy.Execution;
 
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
 public class GenerateSimilarType
 {

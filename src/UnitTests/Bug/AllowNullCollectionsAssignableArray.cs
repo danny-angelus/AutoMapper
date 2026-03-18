@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class AllowNullCollectionsAssignableArray : AutoMapperSpecBase
+public class AllowNullCollectionsAssignableArray : MorphySpecBase
 {
     private Destination _destination;
 

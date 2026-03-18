@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class ReverseMapWithPreserveReferences : AutoMapperSpecBase
+public class ReverseMapWithPreserveReferences : MorphySpecBase
 {
     UserDto _destination;
 

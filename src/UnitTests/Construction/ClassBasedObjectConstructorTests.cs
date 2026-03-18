@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests.Construction;
+namespace Morphy.UnitTests.Construction;
 
 public class ClassBasedObjectConstructorTests
 {

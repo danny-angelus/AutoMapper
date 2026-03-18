@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class NullableBytesAndEnums : AutoMapperSpecBase
+public class NullableBytesAndEnums : MorphySpecBase
 {
     private Destination _destination;
 
@@ -37,7 +37,7 @@ public class NullableBytesAndEnums : AutoMapperSpecBase
     }
 }
 
-public class NullableLong : AutoMapperSpecBase
+public class NullableLong : MorphySpecBase
 {
     private Destination _destination;
 
@@ -68,7 +68,7 @@ public class NullableLong : AutoMapperSpecBase
     }
 }
 
-public class NullableShortWithCustomMapFrom : AutoMapperSpecBase
+public class NullableShortWithCustomMapFrom : MorphySpecBase
 {
     public class Source
     {

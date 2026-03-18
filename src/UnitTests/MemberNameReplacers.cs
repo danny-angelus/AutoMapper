@@ -1,11 +1,11 @@
-ï»¿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
 public class When_using_a_member_name_replacer : NonValidatingSpecBase
 {
     public class Source
     {
         public int Value { get; set; }
-        public int Ã„vÃ­ator { get; set; }
+        public int Ävíator { get; set; }
         public int SubAirlinaFlight { get; set; }
     }
 
@@ -21,8 +21,8 @@ public class When_using_a_member_name_replacer : NonValidatingSpecBase
     {
         var config = new MapperConfiguration(c =>
         {
-            c.ReplaceMemberName("Ã„", "A");
-            c.ReplaceMemberName("Ã­", "i");
+            c.ReplaceMemberName("Ä", "A");
+            c.ReplaceMemberName("í", "i");
             c.ReplaceMemberName("Airlina", "Airline");
             c.CreateMap<Source, Destination>();
         });
@@ -30,16 +30,16 @@ public class When_using_a_member_name_replacer : NonValidatingSpecBase
         var source = new Source()
         {
             Value = 5,
-            Ã„vÃ­ator = 3,
+            Ävíator = 3,
             SubAirlinaFlight = 4
         };
 
-        //Mapper.AddMemberConvention().AddName<ReplaceName>(_ => _.AddReplace("A", "Ã„").AddReplace("i", "Ã­").AddReplace("Airline", "Airlina")).SetMemberInfo<FieldPropertyMemberInfo>();
+        //Mapper.AddMemberConvention().AddName<ReplaceName>(_ => _.AddReplace("A", "Ä").AddReplace("i", "í").AddReplace("Airline", "Airlina")).SetMemberInfo<FieldPropertyMemberInfo>();
         var mapper = config.CreateMapper();
         var destination = mapper.Map<Source, Destination>(source);
 
         Assert.Equal(source.Value, destination.Value);
-        Assert.Equal(source.Ã„vÃ­ator, destination.Aviator);
+        Assert.Equal(source.Ävíator, destination.Aviator);
         Assert.Equal(source.SubAirlinaFlight, destination.SubAirlineFlight);
     }
 }

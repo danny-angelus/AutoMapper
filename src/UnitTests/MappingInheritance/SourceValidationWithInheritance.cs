@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class SourceValidationWithInheritance : AutoMapperSpecBase
+public class SourceValidationWithInheritance : MorphySpecBase
 {
     public abstract class FormElement2
     {
@@ -61,7 +61,7 @@ public class SourceValidationWithInheritance : AutoMapperSpecBase
     public void Validate() => AssertConfigurationIsValid();
 }
 
-public class SourceValidationWithIgnore: AutoMapperSpecBase
+public class SourceValidationWithIgnore: MorphySpecBase
 {
     public abstract class FormElement2
     {

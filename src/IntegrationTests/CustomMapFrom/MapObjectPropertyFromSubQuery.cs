@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.CustomMapFrom;
+namespace Morphy.IntegrationTests.CustomMapFrom;
 public class MultipleLevelsSubquery(DatabaseFixture databaseFixture) : IntegrationTest<MultipleLevelsSubquery.DatabaseInitializer>(databaseFixture)
 {
     [Fact]

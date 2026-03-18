@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class CollectionBaseClassGetConvention : AutoMapperSpecBase
+public class CollectionBaseClassGetConvention : MorphySpecBase
 {
     Destination _destination;
     static int[] SomeCollection = new[] { 1, 2, 3 };

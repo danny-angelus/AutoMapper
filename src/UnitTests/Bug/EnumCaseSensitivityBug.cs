@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Bug;
-public class EnumCaseSensitivityBug : AutoMapperSpecBase
+namespace Morphy.UnitTests.Bug;
+public class EnumCaseSensitivityBug : MorphySpecBase
 {
     private SecondEnum _resultSecondEnum;
     private FirstEnum _resultFirstEnum;

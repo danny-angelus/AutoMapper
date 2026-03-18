@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Bug;
-public class MappingInheritance : AutoMapperSpecBase
+namespace Morphy.UnitTests.Bug;
+public class MappingInheritance : MorphySpecBase
 {
     private Entity testEntity;
     private EditModel testModel;
@@ -27,7 +27,7 @@ public class MappingInheritance : AutoMapperSpecBase
     }
 
     [Fact]
-    public void AutoMapper_should_map_derived_types_properly()
+    public void Morphy_should_map_derived_types_properly()
     {
         testEntity.Value1.ShouldBe(testModel.Value2);
         testEntity.Value2.ShouldBe(testModel.Value1);

@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0" />
-    <ProjectReference Include="..\AutoMapper\AutoMapper.csproj" />
+    <ProjectReference Include="..\Morphy\Morphy.csproj" />
   </ItemGroup>
 
 </Project>

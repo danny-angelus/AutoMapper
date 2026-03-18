@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class When_overriding_global_ignore : AutoMapperSpecBase
+public class When_overriding_global_ignore : MorphySpecBase
 {
     Destination _destination;
 

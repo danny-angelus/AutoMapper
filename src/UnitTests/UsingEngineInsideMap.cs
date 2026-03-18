@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests;
-public class UsingEngineInsideMap : AutoMapperSpecBase
+namespace Morphy.UnitTests;
+public class UsingEngineInsideMap : MorphySpecBase
 {
     private Dest _dest;
 
@@ -43,7 +43,7 @@ public class UsingEngineInsideMap : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_null_with_context_mapper : AutoMapperSpecBase
+public class When_mapping_null_with_context_mapper : MorphySpecBase
 {
     class Source
     {

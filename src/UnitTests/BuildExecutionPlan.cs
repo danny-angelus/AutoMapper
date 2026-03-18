@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests;
-public class BuildExecutionPlan : AutoMapperSpecBase
+namespace Morphy.UnitTests;
+public class BuildExecutionPlan : MorphySpecBase
 {
     Model _source;
     Dto _destination;
@@ -51,7 +51,7 @@ public class BuildExecutionPlan : AutoMapperSpecBase
         _destination.IntValue.ShouldBe(_source.IntValue.Value);
     }
 }
-public class When_reusing_the_execution_plan_inner_map : AutoMapperSpecBase
+public class When_reusing_the_execution_plan_inner_map : MorphySpecBase
 {
     class Source
     {
@@ -80,7 +80,7 @@ public class When_reusing_the_execution_plan_inner_map : AutoMapperSpecBase
         destination.Inner.ShouldBeNull();
     }
 }
-public class AllowNullWithMapAtRuntime : AutoMapperSpecBase
+public class AllowNullWithMapAtRuntime : MorphySpecBase
 {
     class Source
     {
@@ -108,7 +108,7 @@ public class AllowNullWithMapAtRuntime : AutoMapperSpecBase
         destination.Inner.ShouldBeNull();
     }
 }
-public class When_reusing_the_execution_plan : AutoMapperSpecBase
+public class When_reusing_the_execution_plan : MorphySpecBase
 {
     class Source
     {
@@ -139,7 +139,7 @@ public class When_reusing_the_execution_plan : AutoMapperSpecBase
         destination.String.ShouldBeNull();
     }
 }
-public class When_reusing_the_execution_plan_existing_destination : AutoMapperSpecBase
+public class When_reusing_the_execution_plan_existing_destination : MorphySpecBase
 {
     class Source
     {

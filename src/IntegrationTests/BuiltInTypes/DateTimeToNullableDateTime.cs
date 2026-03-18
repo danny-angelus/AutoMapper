@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.BuiltInTypes;
+namespace Morphy.IntegrationTests.BuiltInTypes;
 
 public class DateTimeToNullableDateTime(DatabaseFixture databaseFixture) : IntegrationTest<DateTimeToNullableDateTime.DatabaseInitializer>(databaseFixture)
 {

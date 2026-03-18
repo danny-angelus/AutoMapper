@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class EnumMatchingOnValue : AutoMapperSpecBase
+public class EnumMatchingOnValue : MorphySpecBase
 {
     private SecondClass _result;
 

@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 public class SelectiveConfigurationValidation : NonValidatingSpecBase
 {
     public class GoodSrc { }
@@ -39,7 +39,7 @@ public class SelectiveConfigurationValidation : NonValidatingSpecBase
     [Fact]
     public void Should_pass_specific_profile_assertion()
     {
-        typeof(AutoMapperConfigurationException)
+        typeof(MorphyConfigurationException)
             .ShouldNotBeThrownBy(AssertConfigurationIsValid<GoodProfile>);
     }
 }

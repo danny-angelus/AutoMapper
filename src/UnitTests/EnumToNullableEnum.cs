@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class EnumToNullableEnum : AutoMapperSpecBase
+public class EnumToNullableEnum : MorphySpecBase
 {
     Destination _destination;
     public enum SomeEnum { Foo, Bar }

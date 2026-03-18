@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Bug;
-public class IgnoreShouldBeInheritedRegardlessOfMapOrder : AutoMapperSpecBase
+namespace Morphy.UnitTests.Bug;
+public class IgnoreShouldBeInheritedRegardlessOfMapOrder : MorphySpecBase
 {
     public class BaseDomain
     {
@@ -31,7 +31,7 @@ public class IgnoreShouldBeInheritedRegardlessOfMapOrder : AutoMapperSpecBase
     }
 }
 
-public class IgnoreShouldBeInherited : AutoMapperSpecBase
+public class IgnoreShouldBeInherited : MorphySpecBase
 {
     public class BaseDomain
     {            
@@ -63,7 +63,7 @@ public class IgnoreShouldBeInherited : AutoMapperSpecBase
     }
 }
 
-public class IgnoreShouldBeInheritedWithOpenGenerics : AutoMapperSpecBase
+public class IgnoreShouldBeInheritedWithOpenGenerics : MorphySpecBase
 {
     public abstract class BaseUserDto<TIdType>
     {
@@ -104,7 +104,7 @@ public class IgnoreShouldBeInheritedWithOpenGenerics : AutoMapperSpecBase
         userEntity.Name.ShouldBe("my-User");
     }
 }
-public class IgnoreOverrideShouldBeInherited : AutoMapperSpecBase
+public class IgnoreOverrideShouldBeInherited : MorphySpecBase
 {
     class Foo
     {
@@ -127,7 +127,7 @@ public class IgnoreOverrideShouldBeInherited : AutoMapperSpecBase
         dest.Text.ShouldBe("");
     }
 }
-public class IgnoreOverrideShouldBeOverriden : AutoMapperSpecBase
+public class IgnoreOverrideShouldBeOverriden : MorphySpecBase
 {
     class Foo
     {
@@ -150,7 +150,7 @@ public class IgnoreOverrideShouldBeOverriden : AutoMapperSpecBase
         dest.Text.ShouldBe("");
     }
 }
-public class IgnoreOverrideShouldBeInheritedIncludeBase : AutoMapperSpecBase
+public class IgnoreOverrideShouldBeInheritedIncludeBase : MorphySpecBase
 {
     class Foo
     {
@@ -173,7 +173,7 @@ public class IgnoreOverrideShouldBeInheritedIncludeBase : AutoMapperSpecBase
         dest.Text.ShouldBe("");
     }
 }
-public class IgnoreOverrideShouldBeOverridenIncludeBase : AutoMapperSpecBase
+public class IgnoreOverrideShouldBeOverridenIncludeBase : MorphySpecBase
 {
     class Foo
     {

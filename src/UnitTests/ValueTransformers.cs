@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests
+namespace Morphy.UnitTests
 {
     namespace ValueTransformers
     {
-        public class BasicTransforming : AutoMapperSpecBase
+        public class BasicTransforming : MorphySpecBase
         {
             public class Source
             {
@@ -33,7 +33,7 @@
             }
         }
 
-        public class StackingTransformers : AutoMapperSpecBase
+        public class StackingTransformers : MorphySpecBase
         {
             public class Source
             {
@@ -65,7 +65,7 @@
             }
         }
 
-        public class DifferentProfiles : AutoMapperSpecBase
+        public class DifferentProfiles : MorphySpecBase
         {
             public class Source
             {
@@ -97,7 +97,7 @@
             }
         }
 
-        public class StackingRootConfigAndProfileTransform : AutoMapperSpecBase
+        public class StackingRootConfigAndProfileTransform : MorphySpecBase
         {
             public class Source
             {
@@ -132,7 +132,7 @@
             }
         }
 
-        public class TransformingValueTypes : AutoMapperSpecBase
+        public class TransformingValueTypes : MorphySpecBase
         {
             public class Source
             {
@@ -167,7 +167,7 @@
             }
         }
 
-        public class StackingRootAndProfileAndMemberConfig : AutoMapperSpecBase
+        public class StackingRootAndProfileAndMemberConfig : MorphySpecBase
         {
             public class Source
             {
@@ -203,7 +203,7 @@
             }
         }
 
-        public class StackingTypeMapAndRootAndProfileAndMemberConfig : AutoMapperSpecBase
+        public class StackingTypeMapAndRootAndProfileAndMemberConfig : MorphySpecBase
         {
             public class Source
             {
@@ -240,7 +240,7 @@
             }
         }
     }
-    public class TransformingInheritance : AutoMapperSpecBase
+    public class TransformingInheritance : MorphySpecBase
     {
         public class SourceBase
         {
@@ -279,7 +279,7 @@
         }
     }
 
-    public class TransformingInheritanceForMember : AutoMapperSpecBase
+    public class TransformingInheritanceForMember : MorphySpecBase
     {
         public class SourceBase
         {
@@ -317,7 +317,7 @@
             dest.Value.ShouldBe("Jimmy was cool and now is straight up dope");
         }
     }
-    public class TransformingNullable : AutoMapperSpecBase
+    public class TransformingNullable : MorphySpecBase
     {
         public class Source
         {
@@ -342,7 +342,7 @@
             dest.NotNull.ShouldBe(2);
         }
     }
-    public class NonGenericMemberTransformer : AutoMapperSpecBase
+    public class NonGenericMemberTransformer : MorphySpecBase
     {
         public class Source
         {
@@ -362,7 +362,7 @@
             dest.Value.ShouldBe("value and more");
         }
 
-        public class ConstructorTransforming : AutoMapperSpecBase
+        public class ConstructorTransforming : MorphySpecBase
         {
             public class Source
             {

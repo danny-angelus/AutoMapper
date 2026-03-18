@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class NullToString : AutoMapperSpecBase
+public class NullToString : MorphySpecBase
 {
     private Destination _destination;
 

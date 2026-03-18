@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class InternalProperties : AutoMapperSpecBase
+public class InternalProperties : MorphySpecBase
 {
     public int SomeValue = 2354;
     private Destination _destination;

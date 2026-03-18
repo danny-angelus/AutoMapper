@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 public class IncludedMappingShouldInheritBaseMappings : NonValidatingSpecBase
 {
 
@@ -291,7 +291,7 @@ public class IncludedMappingShouldInheritBaseMappings : NonValidatingSpecBase
         config.AssertConfigurationIsValid();
     }
     [Fact]
-    public void include_should_allow_automapper_to_select_more_specific_included_type_with_one_parameter()
+    public void include_should_allow_Morphy_to_select_more_specific_included_type_with_one_parameter()
     {
         var config = new MapperConfiguration(cfg =>
         {
@@ -312,7 +312,7 @@ public class IncludedMappingShouldInheritBaseMappings : NonValidatingSpecBase
     }
     
     [Fact]
-    public void include_should_allow_automapper_to_select_more_specific_included_type()
+    public void include_should_allow_Morphy_to_select_more_specific_included_type()
     {
         var config = new MapperConfiguration(cfg =>
         {
@@ -416,11 +416,11 @@ public class IncludedMappingShouldInheritBaseMappings : NonValidatingSpecBase
             cfg.CreateMap<ModelSubObjectWithConstructor, DtoSubObjectWithConstructorAndWrongType>();
         });
 
-        Assert.Throws<AutoMapperConfigurationException>(config.AssertConfigurationIsValid).Errors.Single().CanConstruct.ShouldBeFalse();
+        Assert.Throws<MorphyConfigurationException>(config.AssertConfigurationIsValid).Errors.Single().CanConstruct.ShouldBeFalse();
     }
 }
 
-public class OverrideDifferentMapFrom : AutoMapperSpecBase
+public class OverrideDifferentMapFrom : MorphySpecBase
 {
     class Source
     {

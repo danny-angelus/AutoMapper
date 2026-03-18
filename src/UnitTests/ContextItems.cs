@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 public class When_mapping_with_context_state
 {
     public class Source
@@ -25,7 +25,7 @@ public class When_mapping_with_context_state
         dest.Value.ShouldBe(15);
     }
 }
-public class Context_try_get_items : AutoMapperSpecBase
+public class Context_try_get_items : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(c => c.CreateMap<int, int>().ConvertUsing((s, _, c) => 
         c.TryGetItems(out var items) ? (int)items["override"] : s));
@@ -71,7 +71,7 @@ public class When_mapping_with_contextual_values
     }
 }
 
-public class When_mapping_with_contextual_values_wrong_overload : AutoMapperSpecBase
+public class When_mapping_with_contextual_values_wrong_overload : MorphySpecBase
 {
     public class Source
     {
@@ -92,7 +92,7 @@ public class When_mapping_with_contextual_values_wrong_overload : AutoMapperSpec
     [Fact]
     public void Should_report_error()
     {
-        new Action(() => Mapper.Map<Source, Dest>(new Source { Value = 5 })).ShouldThrowException<AutoMapperMappingException>(ex =>
+        new Action(() => Mapper.Map<Source, Dest>(new Source { Value = 5 })).ShouldThrowException<MorphyMappingException>(ex =>
         {
             var inner = ex.InnerException;
             inner.ShouldBeOfType<InvalidOperationException>();
@@ -155,7 +155,7 @@ public class When_mapping_with_contextual_values_in_resolve_func
     }
 }
 
-public class When_mapping_nested_context_items : AutoMapperSpecBase
+public class When_mapping_nested_context_items : MorphySpecBase
 {
     public class Door { }
 

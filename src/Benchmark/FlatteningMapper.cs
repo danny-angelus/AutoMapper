@@ -1,4 +1,4 @@
-using AutoMapper;
+using Morphy;
 using Microsoft.Extensions.Logging.Abstractions;
 
 namespace Benchmark.Flattening;
@@ -340,7 +340,7 @@ public class ManualCtorMapper : IObjectToObjectMapper
 public class FlatteningMapper : IObjectToObjectMapper
 {
     private ModelObject _source;
-    public string Name => "AutoMapper";
+    public string Name => "Morphy";
     public void Initialize()
     {
         _source = new ModelObject

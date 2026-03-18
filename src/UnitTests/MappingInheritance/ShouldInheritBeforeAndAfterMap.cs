@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
+namespace Morphy.UnitTests.MappingInheritance;
 
-public class ShouldInheritBeforeAndAfterMapOnlyOnce : AutoMapperSpecBase
+public class ShouldInheritBeforeAndAfterMapOnlyOnce : MorphySpecBase
 {
     int afterMapCount;
     int beforeMapCount;
@@ -38,7 +38,7 @@ public class ShouldInheritBeforeAndAfterMapOnlyOnce : AutoMapperSpecBase
     }
 }
 
-public class ShouldInheritBeforeAndAfterMapOnlyOnceIncludeBase : AutoMapperSpecBase
+public class ShouldInheritBeforeAndAfterMapOnlyOnceIncludeBase : MorphySpecBase
 {
     int afterMapCount;
     int beforeMapCount;

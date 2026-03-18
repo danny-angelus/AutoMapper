@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.ValueTypes;
+namespace Morphy.UnitTests.ValueTypes;
 
-public class When_value_types_are_the_source_of_map_cycles : AutoMapperSpecBase
+public class When_value_types_are_the_source_of_map_cycles : MorphySpecBase
 {
     public struct Source
     {
@@ -38,7 +38,7 @@ public class When_value_types_are_the_source_of_map_cycles : AutoMapperSpecBase
     }
 }
 
-public class When_value_types_are_the_source_of_map_cycles_with_PreserveReferences : AutoMapperSpecBase
+public class When_value_types_are_the_source_of_map_cycles_with_PreserveReferences : MorphySpecBase
 {
     public struct Source
     {
@@ -81,7 +81,7 @@ public class When_value_types_are_the_source_of_map_cycles_with_PreserveReferenc
     }
 }
 
-public class When_destination_type_is_a_value_type : AutoMapperSpecBase
+public class When_destination_type_is_a_value_type : MorphySpecBase
 {
     private Destination _destination;
 
@@ -121,7 +121,7 @@ public class When_destination_type_is_a_value_type : AutoMapperSpecBase
     }
 }
 
-public class When_source_struct_config_has_custom_mappings : AutoMapperSpecBase
+public class When_source_struct_config_has_custom_mappings : MorphySpecBase
 {
     public struct matrixDigiInStruct1
     {
@@ -158,7 +158,7 @@ public class When_source_struct_config_has_custom_mappings : AutoMapperSpecBase
 }
 
 
-public class When_destination_type_is_a_nullable_value_type : AutoMapperSpecBase
+public class When_destination_type_is_a_nullable_value_type : MorphySpecBase
 {
     private Destination _destination;
 
@@ -198,7 +198,7 @@ public class When_destination_type_is_a_nullable_value_type : AutoMapperSpecBase
         _destination.Value1.ShouldBe(10);
     }
 }
-public class ValueTypeDestinationPreserveReferences : AutoMapperSpecBase
+public class ValueTypeDestinationPreserveReferences : MorphySpecBase
 {
     record Source(List<Source> List);
     record struct Destination(List<Destination> List);

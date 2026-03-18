@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests.Bug
+namespace Morphy.UnitTests.Bug
 {
     namespace RecognizeIxesBug
     {
-        public class IxesTest : AutoMapperSpecBase
+        public class IxesTest : MorphySpecBase
         {
             private Stuff _source;
             private StuffView _dest;

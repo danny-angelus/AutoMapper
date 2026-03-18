@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class MappingToAReadOnlyCollection : AutoMapperSpecBase
+public class MappingToAReadOnlyCollection : MorphySpecBase
 {
     private Destination _destination;
 

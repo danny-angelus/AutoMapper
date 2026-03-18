@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AutoMapper.IntegrationTests.ExplicitExpansion;
+namespace Morphy.IntegrationTests.ExplicitExpansion;
 
 public class ProjectAndAllowNullCollections(DatabaseFixture databaseFixture) : IntegrationTest<ProjectAndAllowNullCollections.DatabaseInitializer>(databaseFixture)
 {

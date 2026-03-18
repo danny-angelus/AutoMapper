@@ -1,6 +1,6 @@
-﻿using AutoMapper.Configuration.Annotations;
+using Morphy.Configuration.Annotations;
 
-namespace AutoMapper.UnitTests
+namespace Morphy.UnitTests
 {
     namespace AttributeBasedMaps
     {
@@ -34,7 +34,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -68,8 +68,8 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Dest, Source>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Dest, Source>());
             }
         }
 
@@ -103,8 +103,8 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Destination, Source>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Destination, Source>());
             }
         }
 
@@ -144,8 +144,8 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid(typeof(Source<>), typeof(Destination<>)));
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid(typeof(Destination<>), typeof(Source<>)));
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid(typeof(Source<>), typeof(Destination<>)));
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid(typeof(Destination<>), typeof(Source<>)));
             }
         }
 
@@ -211,7 +211,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -250,7 +250,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -290,7 +290,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -337,7 +337,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -385,7 +385,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -432,7 +432,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -480,7 +480,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -523,7 +523,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -606,7 +606,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
             }
         }
 
@@ -665,7 +665,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
             }
         }
 
@@ -945,8 +945,8 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<FirstSource, Dest>());
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<SecondSource, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<FirstSource, Dest>());
+                typeof(MorphyConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<SecondSource, Dest>());
             }
         }
 
@@ -999,7 +999,7 @@ namespace AutoMapper.UnitTests
             public void Should_not_convert_to_interface()
             {
                 var source = new Source { Value = 15 };
-                Should.Throw<AutoMapperMappingException>(() => Mapper.Map<IDest>(source))
+                Should.Throw<MorphyMappingException>(() => Mapper.Map<IDest>(source))
                     .Message.ShouldStartWith("Cannot create interface " + typeof(IDest).FullName);
             }
         }

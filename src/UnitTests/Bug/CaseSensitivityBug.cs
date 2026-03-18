@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Bug;
-public class CaseSensitivityBug : AutoMapperSpecBase
+namespace Morphy.UnitTests.Bug;
+public class CaseSensitivityBug : MorphySpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

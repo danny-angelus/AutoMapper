@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class OpenGenericsWithAs : AutoMapperSpecBase
+public class OpenGenericsWithAs : MorphySpecBase
 {
     public class Source
     {
@@ -31,7 +31,7 @@ public class OpenGenericsWithAs : AutoMapperSpecBase
     }
 }
 
-public class OpenGenericsWithInclude : AutoMapperSpecBase
+public class OpenGenericsWithInclude : MorphySpecBase
 {
     public class Person
     {
@@ -96,7 +96,7 @@ public class OpenGenericsWithInclude : AutoMapperSpecBase
     }
 }
 
-public class OpenGenericsWithIncludeBase : AutoMapperSpecBase
+public class OpenGenericsWithIncludeBase : MorphySpecBase
 {
     public class Person
     {
@@ -162,7 +162,7 @@ public class OpenGenericsWithIncludeBase : AutoMapperSpecBase
     }
 }
 
-public class OpenGenericsAndNonGenericsWithIncludeBase : AutoMapperSpecBase
+public class OpenGenericsAndNonGenericsWithIncludeBase : MorphySpecBase
 {
     public abstract class Entity
     {
@@ -219,7 +219,7 @@ public class OpenGenericsAndNonGenericsWithIncludeBase : AutoMapperSpecBase
         model.SubMember.ShouldBe("bar");
     }
 }
-public class IncludeBaseOpenGenerics : AutoMapperSpecBase
+public class IncludeBaseOpenGenerics : MorphySpecBase
 {
     public abstract class OrderModel<T>
     {

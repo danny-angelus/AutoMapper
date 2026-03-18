@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class NonGenericConstructorTests : AutoMapperSpecBase
+namespace Morphy.UnitTests.Projection;
+public class NonGenericConstructorTests : MorphySpecBase
 {
     private Dest[] _dest;
 

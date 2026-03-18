@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
-public class InheritanceWithoutIncludeShouldWork : AutoMapperSpecBase
+namespace Morphy.UnitTests.MappingInheritance;
+public class InheritanceWithoutIncludeShouldWork : MorphySpecBase
 {
     public class FooBase { }
     public class Foo : FooBase { }

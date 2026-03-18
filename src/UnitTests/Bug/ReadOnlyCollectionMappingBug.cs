@@ -1,7 +1,7 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
 // Bug #511
-// https://github.com/LuckyPennySoftware/AutoMapper/issues/511
+// https://github.com/LuckyPennySoftware/Morphy/issues/511
 public class ReadOnlyCollectionMappingBug
 {
     class Source { public int X { get; set; } }

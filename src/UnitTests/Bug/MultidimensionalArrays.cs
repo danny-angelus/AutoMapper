@@ -1,8 +1,8 @@
-﻿using AutoMapper.Internal.Mappers;
+using Morphy.Internal.Mappers;
 
-namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class MultidimensionalArrays : AutoMapperSpecBase
+public class MultidimensionalArrays : MorphySpecBase
 {
     const int SomeValue = 154;
     Source _e = new Source(SomeValue);

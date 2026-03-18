@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
-public class When_using_non_generic_ResolveUsing : AutoMapperSpecBase
+public class When_using_non_generic_ResolveUsing : MorphySpecBase
 {
     private Destination _destination;
 

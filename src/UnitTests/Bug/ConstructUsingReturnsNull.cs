@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+namespace Morphy.UnitTests.Bug;
 
-public class ConstructUsingReturnsNull : AutoMapperSpecBase
+public class ConstructUsingReturnsNull : MorphySpecBase
 {
     class Source
     {
@@ -20,6 +20,6 @@ public class ConstructUsingReturnsNull : AutoMapperSpecBase
     public void Should_throw_when_construct_using_returns_null()
     {
         new Action(() => Mapper.Map<Source, Destination>(new Source()))
-            .ShouldThrowException<AutoMapperMappingException>(ex=>ex.InnerException.ShouldBeOfType<NullReferenceException>());
+            .ShouldThrowException<MorphyMappingException>(ex=>ex.InnerException.ShouldBeOfType<NullReferenceException>());
     }
 }

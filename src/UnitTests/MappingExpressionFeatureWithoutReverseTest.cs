@@ -1,6 +1,6 @@
-﻿using AutoMapper.Features;
+using Morphy.Features;
 
-namespace AutoMapper.UnitTests;
+namespace Morphy.UnitTests;
 
 public class MappingExpressionFeatureWithoutReverseTest
 {

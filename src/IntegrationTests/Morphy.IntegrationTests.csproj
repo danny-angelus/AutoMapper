@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <NoWarn>$(NoWarn);618</NoWarn>
+    <AssemblyOriginatorKeyFile>..\..\Morphy.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\UnitTests\MorphySpecBase.cs" Link="MorphySpecBase.cs" />
+    <ProjectReference Include="..\Morphy\Morphy.csproj" />
+    <PackageReference Include="Testcontainers.MsSql" Version="4.8.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="Shouldly" Version="4.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Xunit" />
+    <Using Include="Shouldly" />
+    <Using Include="Microsoft.EntityFrameworkCore" />
+    <Using Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="System.ComponentModel.DataAnnotations.Schema" />
+    <Using Include="Morphy.UnitTests" />
+  </ItemGroup>
+</Project>
